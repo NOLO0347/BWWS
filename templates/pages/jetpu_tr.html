@@ -1,0 +1,613 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brown Well & Water Supply</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <noscript
+      ><link rel="stylesheet" href="{% static 'css/noscript.css' %}"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt style2">
+        <a href="{% url 'index' %}" class="logo"
+          ><strong>BWWS</strong> <span>Established in 1868</span></a
+        >
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'timesheet' %}">Timesheet</a></li>
+          <li><a href="{% url 'tools' %}">Tools</a></li>
+          <li><a href="{% url 'info' %}">Info & Troubleshooting</a></li>
+        </ul>
+        <ul class="actions stacked">
+          <li><a href="#" class="button fit">Log In</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main -->
+      <div id="main" class="alt">
+        <!-- One -->
+        <section id="one">
+          <div class="inner">
+            <header class="major">
+              <h1>Jet Pump Troubleshooting</h1>
+            </header>
+            <p>
+              This “TROUBLESHOOTING” information is intended to guide in the
+              general determination of pump problems and their solutions. Each
+              manufacturer normally provides a description of warranty
+              conditions. Some pump warranties are immediately voided if the
+              unit is disassembled. Be sure to thoroughly read the owner's
+              manual and warranty.
+            </p>
+            <blockquote>
+              <em><strong>Installation and Repairs Disclaimer:</strong></em>
+              Installation and parts manuals are provided only as reference
+              tools. Seller makes any representation or warranty of any kind to
+              the Buyer that he or she is qualified to neither install nor make
+              any repairs to the product. Seller expressly states that
+              installation, repairs and parts replacements should be undertaken
+              by competent and qualified persons, technicians or contractors and
+              not by the Buyer. The Buyer assumes all risk and liability arising
+              out of his or her installation or repair to the original product.
+            </blockquote>
+            <ul>
+              <li>
+                <a href="#scroll-to-section1">Pump Will Not Run or Start</a>
+              </li>
+              <li>
+                <a href="#scroll-to-section2"
+                  >Pump Operates But Delivers Little Or No Water</a
+                >
+              </li>
+              <li>
+                <a href="#scroll-to-section3"
+                  >Pump Delivers Water - Will Not Shut Off</a
+                >
+              </li>
+              <li>
+                <a href="#scroll-to-section4"
+                  >Pump Cycles Excessively (Starts & Stops Too Often)</a
+                >
+              </li>
+              <li>
+                <a href="#scroll-to-section5"
+                  >Motor Overheats And Overload Trips Out
+                </a>
+              </li>
+              <li>
+                <a href="#scroll-to-section6"
+                  >Pump Activates With No Apparent Demand</a
+                >
+              </li>
+              <li>
+                <a href="#scroll-to-section7">Water Flow Stops At Cut-in</a>
+              </li>
+            </ul>
+            <section id="scroll-to-section1">
+              <div class="table-wrapper">
+                <table class="alt">
+                  <h4>Pump Will Not Run or Start</h4>
+                  <thead>
+                    <tr>
+                      <th>Issues</th>
+                      <th>Solutions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Blown fuse or power turned off:</td>
+                      <td>
+                        Check to see if fuse is OK. Check power. If blown,
+                        replace with fuse of proper size. Turn power on.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Low line voltage:</td>
+                      <td>
+                        Use voltmeter to check pressure switch or terminals
+                        nearest pump. If voltage under recommended minimum,
+                        check wire size from main switch on property. If OK,
+                        contact power company.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Loose, broken or incorrect wiring:</td>
+                      <td>
+                        Check wiring circuit on diagram. See that all
+                        connections are tight and no short circuits exist
+                        because of worn insulation, crossed wire, etc. Rewire
+                        any incorrect circuits. Tighten connections, replace
+                        defective wires.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Defective motor:</td>
+                      <td>
+                        Check to see that switch is closed. Repair or take to
+                        motor service station.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Defective pressure switch:</td>
+                      <td>
+                        Check switch setting. Examine switch contacts for dirt
+                        or excessive wear. Adjust switch settings. Clean
+                        contacts with emery cloth or fine grit sandpaper if
+                        dirty.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Tubing to pressure switch plugged:</td>
+                      <td>
+                        Remove tubing and blow through it. Clean or replace if
+                        plugged.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Impeller or seal:</td>
+                      <td>
+                        Turn off power. Using a screwdriver, try to turn
+                        impeller or motor. If impeller will not turn, remove
+                        housing to locate source of binding.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Defective start capacitor:</td>
+                      <td>
+                        Use an ohmmeter to check resistance across capacitor.
+                        Needle should jump when contact is made. No movement
+                        means an open capacitor; no resistance means capacitor
+                        is shorted. Replace capacitor or take motor to service
+                        station.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Motor shorted out:</td>
+                      <td>
+                        If fuse is blown when pump is started (and external
+                        wiring is OK), motor is shorted. Replace motor.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section id="scroll-to-section2">
+              <div class="table-wrapper">
+                <table class="alt">
+                  <h4>Pump Operates But Delivers Little Or No Water</h4>
+                  <thead>
+                    <th>Issues</th>
+                    <th>Solutions</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Low line voltage causing reduce motor speed:</td>
+                      <td>
+                        Use voltmeter to check at pressure switch or terminals
+                        nearest pump. If voltage under recommended minimum,
+                        check size of wiring from main switch on property. If
+                        OK, contact power company.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>System incompletely primed:</td>
+                      <td>
+                        When no water is delivered, check prime of pump and well
+                        piping. Fill pump completely with water through priming
+                        opening and reprime pump.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Air lock in suction line:</td>
+                      <td>
+                        Check horizontal piping between well and pump. If it
+                        does not pitch upward from well to pump, an air lock may
+                        form. Rearrange piping to eliminate air lock.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Undersized piping:</td>
+                      <td>
+                        If system delivery is low, the piping and/or plumbing
+                        lines may be undersized. Refigure friction loss. Replace
+                        undersized piping or install pump with higher capacity.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Leak in air volume control or tubing (Galvanized tank
+                        installations):
+                      </td>
+                      <td>
+                        Disconnect air volume control tubing at pump and plug
+                        hole. If capacity increases, a leak exists in the tubing
+                        of control. Tighten all fittings and replace control if
+                        necessary.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Pressure regulating valve stuck or incorrectly set (deep
+                        well only):
+                      </td>
+                      <td>
+                        Check valve setting. Inspect valve for defects. Reset,
+                        clean or replace valve as needed.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Leak on suction side of system:</td>
+                      <td>
+                        On shallow well units, install pressure gauge on suction
+                        side. On deep well systems, attach a pressure gauge to
+                        the pump. Close the discharge line valve. Then, using a
+                        bicycle pump or air compressor, apply about 30 PSI
+                        pressure to the system. If the system will not hold this
+                        pressure when the compressor is shut off, there is a
+                        leak on the suction side. Make sure above ground
+                        connections are tight. Then repeat test. If necessary,
+                        pull piping and repair leak.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Low well level:</td>
+                      <td>
+                        Check well depth against pump performance table to make
+                        sure pump and ejector are properly sized. If undersized,
+                        replace pump or ejector.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Wrong pump/ejector combination:</td>
+                      <td>
+                        Check pump and ejector models against manufacturer’s
+                        performance tables. Replace ejector if wrong model is
+                        being used.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Low well capacity:</td>
+                      <td>
+                        Shut off pump and allow well to recover. Restart pump
+                        and note whether delivery drops after continuous
+                        operation. If well is “weak”, lower ejector (deep well),
+                        use a tail pipe (deep well) or switch from shallow well
+                        to deep well equipment.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Plugged ejector:</td>
+                      <td>
+                        Remove ejector and inspect. Clean and reinstall if
+                        dirty.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Defective or plugged check valve or foot valve and/or
+                        strainer:
+                      </td>
+                      <td>
+                        Pull valve and inspect. Partial clogging will reduce
+                        delivery. Complete clogging will result in no water
+                        flow. A defective valve may cause pump to lose prime,
+                        resulting in no delivery. Clean, repair or replace as
+                        needed.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Worn or defective pump parts or plugged impeller:</td>
+                      <td>
+                        Low delivery may result from wear on impeller or other
+                        pump parts. Disassemble and inspect. Replace worn parts
+                        or entire pump. Clean parts if required.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section id="scroll-to-section3">
+              <div class="table-wrapper">
+                <table class="alt">
+                  <h4>Pump Delivers Water - Will Not Shut Off</h4>
+                  <thead>
+                    <th>Issues</th>
+                    <th>Solutions</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Impeller worn or plugged, no jet assembly installed, or
+                        jet plugged:
+                      </td>
+                      <td>Install jet assembly or unclog as required.</td>
+                    </tr>
+                    <tr>
+                      <td>System head too high:</td>
+                      <td>
+                        If head cannot be changed, replace pump with suitable
+                        unit.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Suction lift or suction losses excessive:</td>
+                      <td>
+                        Lower pump and or replace excessive amount of fittings
+                        in the line.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Pressure switch clogged:</td>
+                      <td>
+                        Unclog as required, and/or replace pressure switch.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Pressure switch incorrectly adjusted:</td>
+                      <td>Adjust maintaining 20 PSI differential</td>
+                    </tr>
+                    <tr>
+                      <td>Leaks in discharge piping or at home:</td>
+                      <td>Repair leaks</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section id="scroll-to-section4">
+              <div class="table-wrapper">
+                <table class="alt">
+                  <h4>Pump Cycles Excessively (Starts & Stops Too Often)</h4>
+                  <thead>
+                    <th>Issues</th>
+                    <th>Solutions</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Leak in pressure tank:</td>
+                      <td>
+                        Apply soapy water to entire surface above water line. If
+                        bubbles appear, air is leaking from tank. Repair leaks
+                        or replace tank.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Defective air volume control:</td>
+                      <td>
+                        This will lead to a waterlogged tank. Make sure control
+                        is operating properly. If not, remove and examine for
+                        plugging. Clean or replace defective control.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Faulty pressure switch:</td>
+                      <td>
+                        Check switch setting. Examine switch contacts for dirt
+                        or excessive wear. Adjust switch settings. Clean
+                        contacts with emery cloth if dirty.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Leak on discharge side of system:</td>
+                      <td>
+                        Make sure all fixtures in plumbing system are shut off.
+                        Then check all units (especially ball cocks) for leaks.
+                        Listen for noise of water running. Repair leaks as
+                        necessary.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Leak on suction side of system:</td>
+                      <td>
+                        On shallow well units, install pressure gauge on suction
+                        side. On deep well systems, attach a pressure gauge to
+                        the pump. Close the discharge line valve. Then, using a
+                        bicycle pump or air compressor, apply about 30 PSI
+                        pressure to the system. If the system will not hold this
+                        pressure when the compressor is shut off, there is a
+                        leak on the suction side. Make sure above ground
+                        connections are tight. Then repeat test. If necessary,
+                        pull piping and repair leak.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Leak in foot valve or check valve:</td>
+                      <td>
+                        Pull piping and examine foot valve. Repair or replace
+                        defective valve.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Water logged pressure tank:</td>
+                      <td>
+                        If diaphram, replace tank. If conventional, drain tank
+                        and replace air volume control as needed.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Pump farther than 4 feet from tank:</td>
+                      <td>Shorten the distance between tank and pump.</td>
+                    </tr>
+                    <tr>
+                      <td>High friction loss valves between pump and tank:</td>
+                      <td>Use only gate or ball valves.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section id="scroll-to-section5">
+              <div class="table-wrapper">
+                <table class="alt">
+                  <h4>Motor Overheats And Overload Trips Out</h4>
+                  <thead>
+                    <th>Issues</th>
+                    <th>Solutions</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Incorrect line voltage:</td>
+                      <td>
+                        Use voltmeter to check at pressure switch or terminals
+                        nearest pump. If voltage under recommended minimum,
+                        check size of wiring from main switch on property. If
+                        OK, contact power company.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Motor wired incorrectly:</td>
+                      <td>
+                        Check motor wiring diagram. Reconnect for proper voltage
+                        as per wiring diagram.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Inadequate ventilation:</td>
+                      <td>
+                        Continuous operation at very low pressure places heavy
+                        overload on pump. This can cause overload protection to
+                        trip. Install globe valve on discharge line and throttle
+                        to increase pressure.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section id="scroll-to-section6">
+              <div class="table-wrapper">
+                <table class="alt">
+                  <h4>Pump Rapid-Cycles</h4>
+                  <thead>
+                    <th>Issues</th>
+                    <th>Solutions</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Incorrect air charge in tank:</td>
+                      <td>
+                        Set air-charge 2 PSI below the pump cut-in pressure for
+                        steel bladder tanks or 4 PSI for fiberglass bladder
+                        tanks.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Bladder or diaphragm has ruptured:</td>
+                      <td>Replace tank.</td>
+                    </tr>
+                    <tr>
+                      <td>Incorrect pressure switch differential:</td>
+                      <td>Adjust pressure switch differential to 20 PSI.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section id="scroll-to-section7">
+              <div class="table-wrapper">
+                <table class="alt">
+                  <h4>Pump Activates With No Apparent Demand</h4>
+                  <thead>
+                    <th>Issues</th>
+                    <th>Solutions</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Faulty check or foot valve:</td>
+                      <td>
+                        Close valve between tank and house. If gauge pressure
+                        drops, the check or foot valve is faulty. Replace
+                        defective valve.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Slow leak in house plumbing:</td>
+                      <td>
+                        Close valve between tank and house. If gauge pressure
+                        does not drop, there is a slow leak in the house
+                        plumbing. Repair leak
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section id="scroll-to-section8">
+              <div class="table-wrapper">
+                <table class="alt">
+                  <h4>Water Flow Stops At Cut-in</h4>
+                  <thead>
+                    <th>Issues</th>
+                    <th>Solutions</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Incorrect air charge in tank:</td>
+                      <td>
+                        Set air-charge 2 PSI below the pump cut-in pressure for
+                        steel bladder tanks or 4 PSI for fiberglass bladder
+                        tanks
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Defective pump:</td>
+                      <td>Repair or replace pump.</td>
+                    </tr>
+                    <tr>
+                      <td>Defective well:</td>
+                      <td>
+                        Inadequate water supply in well, cut pump power and
+                        recheck after 24 hours.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Well components failure:</td>
+                      <td>Defective/Cracked pipe, jet, foot valve in well.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </section>
+      </div>
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <ul class="copyright">
+            <li>&copy; NOLOdev</li>
+            <li>Theme: HTML5 UP</li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+    <script src="{% static 'js/browser.min.js' %}"></script>
+    <script src="{% static 'js/breakpoints.min.js' %}"></script>
+    <script src="{% static 'js/util.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/scrolltosection.js' %}"></script>
+  </body>
+</html>

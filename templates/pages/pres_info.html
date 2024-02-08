@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brown Well & Water Supply</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <noscript
+      ><link rel="stylesheet" href="{% static 'css/noscript.css' %}"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt style2">
+        <a href="{% url 'index' %}" class="logo"
+          ><strong>BWWS</strong> <span>Established in 1868</span></a
+        >
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'timesheet' %}">Timesheet</a></li>
+          <li><a href="{% url 'tools' %}">Tools</a></li>
+          <li><a href="{% url 'info' %}">Info & Troubleshooting</a></li>
+        </ul>
+        <ul class="actions stacked">
+          <li><a href="#" class="button fit">Log In</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main -->
+      <div id="main" class="alt">
+        <!-- One -->
+        <section id="one">
+          <div class="inner">
+            <header class="major">
+              <h1>Pressure Loss due to Friction and Gravity</h1>
+              <h4>The Uniform Plumbing Code requires a minimum of 15 PSI at each fixture.</h4>
+            </header>
+            Here we will cover two forms of pressures:
+            <ol>
+              <li>
+                Household pressure is measured in terms of PSI (pounds per
+                square inch), i.e. the pressure tank operates through a range of
+                30 to 50 <u>PSI</u>, for example.
+              </li>
+              <li>
+                Lift pressure is measured in terms of 'feet of head', i.e. the
+                pumping level is 60 <u>feet</u> below the pressure tank.
+              </li>
+            </ol>
+            <p>
+              Just remember you can use either term to express pressure but you
+              must be consistent in your formulas. And also remember you can
+              convert from one to the other by using the factors: <br />
+              <b>1 ft of head = .433 PSI.</b> or conversly
+              <b>1 PSI = 2.3 ft of head</b>
+            </p>
+
+            <section class="box">
+              <h5>Household Pressure</h5>
+              <p>
+                It is the pressure switch cut-in setting (30 PSI for a 30/50
+                switch) that determines the minimum system pressure at the
+                <b>furthest fixture in the house</b> (ex. the showerhead on the
+                second floor). With a 30/50 pressure switch, the minimum system
+                pressure at the tank will be 30 PSI. From the conversion formula
+                above,
+                <em
+                  >for each foot in elevation above the tank, you lose
+                  <u>.433 pounds.</u></em
+                >
+                <br /><br />
+                Using the formula and examples below, let's calculate which
+                pressure switch we will need for each application. <br />
+                <br />
+                <b>SWi</b> <b>&#8722;</b> (<b>FH</b> <b>&times;</b> <b>.433</b>)
+                <b>=</b>
+                <sub
+                  >SWi = Switch Cut-in | FH = Foot Head | .433 = 1 foot of
+                  head</sub
+                >
+              </p>
+
+              <blockquote>
+                <strong>Good</strong> Example: <br />
+                <u>Two</u> story home with the pressure tank in the basement,
+                the furthest fixture is the second floor showerhead
+                approximately 23 feet above the tank. You are wanting to install
+                a 30/50 switch. <br /><br />
+                <b>30</b> <b>&#8722;</b> (<b>23</b> <b>&times;</b> <b>.433</b>)
+                <b>=</b> <br />
+                <b>30</b> <b>&#8722;</b> <b>9.95</b> <b>=</b>
+                <b><u>20.05 PSI</u></b>
+                <sub>
+                  a 30/50 switch meets the required 15psi minimum target.</sub
+                >
+              </blockquote>
+              <blockquote>
+                <strong>Bad</strong> Example: <br />
+                <u>Three</u> story home with the pressure tank at the well head
+                and below the grade of the house, the grade is approximately 10
+                feet. The furthest fixture is the third floor showerhead
+                approximately 31 feet above the ground floor. You are wanting to
+                install a 30/50 switch. <br />
+                <br />
+                <b>30</b> <b>&#8722;</b> ((<b>31</b> <b>+</b> <b>10</b>)
+                <b>&times;</b> <b>.433</b>) <b>=</b> <br />
+                <b>30</b> <b>&#8722;</b> (<b>41</b> <b>&times;</b> <b>.433</b>)
+                <b>=</b> <b>17.75</b> <br />
+                <b>30</b> <b>&#8722;</b> <b>17.75</b> <b>=</b>
+                <b><u>12.25 PSI</u></b>
+                <sub>
+                  a 30/50 switch does <u>NOT</u> meet the required 15psi minimum
+                  target.</sub
+                >
+                <br />
+                <br />
+                <strong>Revision:</strong> How about a 40/60 switch? <br />
+                <br />
+                <b>40</b> <b>&#8722;</b> ((<b>31</b> <b>+</b> <b>10</b>)
+                <b>&times;</b> <b>.433</b>) <b>=</b> <br />
+                <b>40</b> <b>&#8722;</b> (<b>41</b> <b>&times;</b> <b>.433</b>)
+                <b>=</b> <b>17.75</b> <br />
+                <b>40</b> <b>&#8722;</b> <b>17.75</b> <b>=</b>
+                <b><u>22.25 PSI</u></b>
+                <sub>
+                  a 40/60 switch meets the required 15psi minimum target.</sub
+                >
+              </blockquote>
+            </section>
+            <section class="box">
+              <h5>Lift Pressure</h5>
+              <p>
+                We have a well where the static water level is 50 feet below the
+                pressure tank, and the well drawdown is 10 feet, making the
+                pumping level <u>60</u> feet. The household pressure
+                requirements would be <u>50</u> PSI because you are using a
+                30/50 pressure switch. The total pressure required in terms of
+                feet of head, would be: <br /><br />Lift pressure: <b>60</b> ft.
+                <br />Household pressure: <b>50</b> PSI
+                <b>&times; 2.31 = 115.5</b> ft. <br />Total: <b>175.5</b> ft.
+                <br />
+                <br />
+                and that gives us a total pump pressure requirement of 175.5
+                feet of head. This is the number you will use to select your
+                pump.
+              </p>
+              <p>
+                Converting from feet of head back to PSI you get:
+                <b>175.5</b> ft. <b>&times; .433 = 76</b> PSI.
+              </p>
+              <blockquote>
+                Mathmatically speaking, it doesn't matter which terms you use,
+                just be consistent. You can not add feet of head to PSI in an
+                equation without converting to a common term because all factors
+                in the equation must be in the same terms.
+              </blockquote>
+            </section>
+          </div>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <ul class="copyright">
+            <li>&copy; NOLOdev</li>
+            <li>Theme: HTML5 UP</li>
+            <li>Article: thePUMPBOOK</li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+    <script src="{% static 'js/browser.min.js' %}"></script>
+    <script src="{% static 'js/breakpoints.min.js' %}"></script>
+    <script src="{% static 'js/util.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>

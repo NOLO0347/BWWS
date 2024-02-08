@@ -1,0 +1,571 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brown Well & Water Supply</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <noscript
+      ><link rel="stylesheet" href="{% static 'css/noscript.css' %}"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt style2">
+        <a href="{% url 'index' %}" class="logo"
+          ><strong>BWWS</strong> <span>Established in 1868</span></a
+        >
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'timesheet' %}">Timesheet</a></li>
+          <li><a href="{% url 'tools' %}">Tools</a></li>
+          <li><a href="{% url 'info' %}">Info & Troubleshooting</a></li>
+        </ul>
+        <ul class="actions stacked">
+          <li><a href="#" class="button fit">Log In</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main -->
+      <div id="main" class="alt">
+        <!-- One -->
+        <section id="one">
+          <div class="inner">
+            <header class="major">
+              <h1>Submersible Pump Troubleshooting</h1>
+            </header>
+            <p>
+              Submersible pumps, built to last in tight, corrosive water well
+              environments, can prove nearly inaccessible when suspended 10 feet
+              from the bottom of such a well — often over 300 feet deep. This
+              can make maintenance issues hard to diagnose, as well as leave the
+              equipment susceptible to ambient temperatures, rainfall and
+              drought. A rise in residential housing construction coupled with
+              increasing water scarcity have caused a boom in the submersible
+              well pump market, making the ability to quickly troubleshoot
+              existing pump issues critical in aiding pump longevity.
+            </p>
+            <blockquote>
+              <em><strong>Installation and Repairs Disclaimer:</strong></em>
+              Installation and parts manuals are provided only as reference
+              tools. Seller makes any representation or warranty of any kind to
+              the Buyer that he or she is qualified to neither install nor make
+              any repairs to the product. Seller expressly states that
+              installation, repairs and parts replacements should be undertaken
+              by competent and qualified persons, technicians or contractors and
+              not by the Buyer. The Buyer assumes all risk and liability arising
+              out of his or her installation or repair to the original product.
+            </blockquote>
+            <ul>
+              <li>
+                <a href="#scroll-to-section1"
+                  >Fuses Blow Or Curcuit Breaker Trips When Motor Starts</a
+                >
+              </li>
+              <li>
+                <a href="#scroll-to-section2"
+                  >Pump Operates But Delivers Little To No Water</a
+                >
+              </li>
+              <li>
+                <a href="#scroll-to-section3">Pump starts too frequently</a>
+              </li>
+              <li>
+                <a href="#scroll-to-section4"
+                  >Fuses Blow When Motor Is Running</a
+                >
+              </li>
+              <li><a href="#scroll-to-section5">Pump Will Not Shut Off</a></li>
+              <li>
+                <a href="#scroll-to-section6"
+                  >Motor Does Not Start, But Fuses Do Not Blow</a
+                >
+              </li>
+            </ul>
+            <section id="scroll-to-section1">
+              <h3>Fuses Blow Or Curcuit Breaker Trips When Motor Starts</h3>
+              <div class="table-wrapper">
+                <table class="alt">
+                  <thead>
+                    <tr>
+                      <th>Issues</th>
+                      <th>Explanations</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1. Incorrect line voltage:</td>
+                      <td>
+                        Check line voltage terminals in control box or
+                        connection box if 2-wire model, with voltmeter. Make
+                        sure that the voltage is within the minimum-maximum
+                        range prescribed by manufacturer. If the voltage is
+                        incorrect, contact an electrician to have it corrected.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        2a. Defective control box (skip for 2-wire models):
+                      </td>
+                      <td>
+                        Check all motor and power-line wiring in control box,
+                        following the wire diagram found inside the box. Check
+                        that all connections are tight and no short curcuits
+                        exist dur to worn insulation, crossed wires, etc. Rewire
+                        any incorrect curcuits. Tighten loose connections.
+                        Replace worn wires.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2b. Incorrect components:</td>
+                      <td>
+                        Check all control box components to insure they are
+                        correct type and size specific for your pump with
+                        manufacture's literature. Check previous servive work to
+                        see if correct components were installed. Replace any
+                        incorrect component with the size and type recommended
+                        by the manufacturer.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        2c. Defective starting capacitor (skip for 2-wire
+                        models):
+                      </td>
+                      <td>
+                        Using an ohmmeter, determine resistance across starting
+                        capacitor. When contact is made, the ohmmeter needle
+                        should jump at once, then move up slowly. No movement
+                        indicates an open capacitor or defective relay points.
+                        No resistance means the capacitor is shorted. Replace
+                        defective starting capacitor.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2d. Defective relay (skip for 2-wire models):</td>
+                      <td>
+                        Using an ohmmeter, check relay coil. Its resistance
+                        should be as shown in the manufacturer's literature.
+                        Recheck ohmmeter reading across starting capacitor. A
+                        good capacitor and no needle movement indicates
+                        defective relay points. If coil resistance is incorrect
+                        or points defective, replace relay.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3. Defective pressure switch:</td>
+                      <td>
+                        Check voltage across pressure switch points. If less
+                        than line voltage determined in "1" above, the switch
+                        points are causing low voltage by imperfect contact.
+                        Clean points with a mild abrasive cloth or replace
+                        pressure switch.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4. Pump in crooked well:</td>
+                      <td>
+                        Wedged into a crooked well the motor and pump may become
+                        misaligned resulting in a locked motor. Pull pump and
+                        straighten well.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5a. Defective motor winding or cable:</td>
+                      <td>
+                        Check resistance of motore winding by using an ohmmeter
+                        on proper terminals in control box (see manufacture's
+                        wiring diagram). Resistance should match ohms specified
+                        in manufacture's data sheet. If too low, motor winding
+                        may be shorted; if high or infinite resistance, check
+                        for open circuit in motor winding. If the motor winding
+                        is defective - shorted or open - the pump must be pulled
+                        and replaced.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5b. Grounded cable or wiring:</td>
+                      <td>
+                        Ground one lead of ohmmeter to drop pipe or shell
+                        casing, touch other lead to each motor wire terminal. If
+                        needle moves appreciably there is a good ground in
+                        either cable or motor winding. Pull the pump and inspect
+                        the cable for damage. Replace damaged cable. If cable
+                        checks OK, the motor winding is grounded.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>6. Pump sand locked:</td>
+                      <td>
+                        Make pump run backwards by interchanging main and start
+                        winding (black and red) motor leads at control box. Pull
+                        pump - disassemble and clean. Before replacing make sure
+                        sand has settled in well. If well is chronically sandy
+                        then submersible pump should not be used.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section id="scroll-to-section2">
+              <div class="table-wrapper">
+                <table class="alt">
+                  <h4>Pump Operates But Delivers Little To No Water</h4>
+                  <thead>
+                    <th>Issues</th>
+                    <th>Explanations</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1. Pump may be air locked:</td>
+                      <td>
+                        Stop and start the pump several times, waiting between
+                        cycles. If pump resumes normal delivery air lock was the
+                        trouble. If this test fails to correct the trouble,
+                        proceed as below.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2. Water level in well too low:</td>
+                      <td>
+                        Well production may be too low for pump capacity.
+                        Restricted flow of pump output, wait for well to
+                        recover, and start pump. If parcial restriction corrects
+                        trouble, leave valve or cock at restricted setting.
+                        Otherwise, lower pump in well if depth is sufficient. Do
+                        not lower if sand clogging might occur. Consider
+                        replacing existing pump with one of fewer stages if
+                        possible.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        3. Discharge line check valve installed backwards:
+                      </td>
+                      <td>
+                        Examine check valve on discharge line to make sure arrow
+                        indicating direction of flow points in correct
+                        direction. Reverse valve if necessary.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4. Leak in drop pipe:</td>
+                      <td>
+                        Raise pipe and examine for leaks. Replace damaged
+                        section of drop pipe.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5. Pump check valve jammed by drop pipe:</td>
+                      <td>
+                        When pump is pulled after completing "4" above, examine
+                        drop pipe connection to pump outlet. If threaded section
+                        of drop pipe has been screwed in too far, it may be
+                        jamming the check valve in the closed position. Unscrew
+                        drop pipe and cut off portion of threads.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>6. Pump intake screen blocked:</td>
+                      <td>
+                        The intake screen on the pump may be blocked by sand or
+                        mud. Examine. Clean screen. Make sure pump is
+                        reinstalled several feet above well bottom, preferably
+                        10 feet or more.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>7. Pump parts worn:</td>
+                      <td>
+                        Presence of abrasives in water may result in excessive
+                        wear on impeller, casing and other close-clearance
+                        parts. Before pulling pump reduce setting on pressure
+                        switch to see if pump shuts off. If it does, check for
+                        worn parts. Pull pump and replace worn components.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section id="scroll-to-section3">
+              <div class="table-wrapper">
+                <table class="alt">
+                  <h4>Pump starts too frequently</h4>
+                  <thead>
+                    <th>Issues</th>
+                    <th>Explanations</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        1. Pressure switch defective or out of adjustment:
+                      </td>
+                      <td>
+                        Check pressure switch settings and examine for defects.
+                        Reduce pressure setting or replace switch.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        2. Leak in pressure tank above water level or in
+                        diaphragm if a captive air tank:
+                      </td>
+                      <td>
+                        Apply soap solution to entire tank surface and check for
+                        bubbles indicating air escaping. If a captive air tank,
+                        drain water chamber and check for water on air side by
+                        rocking tank. Repair or replace tank.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3. Leak in plumbing system:</td>
+                      <td>
+                        Examine service line to house and distribution branches
+                        for leaks. Repair leaks.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4. Discharge line check valve leaking:</td>
+                      <td>Remove and examine. Replace if defective.</td>
+                    </tr>
+                    <tr>
+                      <td>5. Air volume control plugged:</td>
+                      <td>
+                        Remove and inspect air volume control. Clean or replace.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>6. Snifter valve plugged:</td>
+                      <td>
+                        Remove and inspect snifter valve. Clean or replace.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section id="scroll-to-section4">
+              <div class="table-wrapper">
+                <table class="alt">
+                  <h4>Fuses Blow When Motor Is Running</h4>
+                  <thead>
+                    <th>Issues</th>
+                    <th>Explanations</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1. Incorrect voltage:</td>
+                      <td>
+                        Check line voltage terminals in the control box (or
+                        pressure switch in the case of 2-wire models) with a
+                        voltmeter. Make sure that the voltage is within the
+                        minimum-maximum range prescribed by the manufacturer. If
+                        voltage is incorrect, contact an electrician for
+                        repairs.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2. Overheaded overload protection box:</td>
+                      <td>
+                        If sunlight or other source of heat has made box too
+                        hot, circuit breakers may trip or fuses blow. If box is
+                        hot to the touch, this may be the problem. Ventilate or
+                        shade box, or remove the source of heat.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        3. Defective control box components (skip for 2-wire
+                        models):
+                      </td>
+                      <td>
+                        Using an ohmmeter, determine the resistance across the
+                        running capacitor. When contact is made, the ohmmeter
+                        needle should jump at once, then move up more slowly. No
+                        movement indicates an open capacitor (or defective relay
+                        points); no resistance means that the capacitor is
+                        shorted. <br /><br />
+                        Using an ohmmeter, check the relay coil. Its resistance
+                        shouldbe as shown in the manufacturer's literature.
+                        Recheck ohmmeter reading across running capacitor. With
+                        a good capacitor, no movements of the needle indicates
+                        relay points. Replace defective components.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4. Defective motor or winding cable:</td>
+                      <td>
+                        Check the resistance of the motor winding by using an
+                        ohmmeter on the proper terminals in the control box (see
+                        manufacturer's wiring diagram). The resistance should
+                        match the ohms specified in the manufacturer's data
+                        sheet. If too low, the motor winding may be shorted. If
+                        the ohmmeter needle does not move, indicating high or
+                        infinite resistance, there is an open circuit in the
+                        motor winding.
+                        <br />
+                        <br />
+                        Ground one lead of the ohmmeter onto the drop pipe or
+                        shell casing, then touch the other lead to each motor
+                        wire terminal. If the ohmmeter needle moves appreciably
+                        when this is done, there is a ground in either the cable
+                        or the motor winding. If neither cable nor winding is
+                        defective, shorted, grounded, or open - pump must be
+                        pulled and serviced or replaced.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5. Pump becomes sand-locked:</td>
+                      <td>
+                        If the fuses blow while the pump is operating, sand or
+                        grit may have become wedged in the impeller, causing the
+                        rotor to lock. To check this, pull the pump -
+                        disassemble and clean. Before replacing, make sure that
+                        sand has settled in the well. If well is chronically
+                        sandy, a submersible pump should not be used.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section id="scroll-to-section5">
+              <div class="table-wrapper">
+                <table class="alt">
+                  <h4>Pump Will Not Shut Off</h4>
+                  <thead>
+                    <th>Issues</th>
+                    <th>Explanations</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1. Defective pressure switch:</td>
+                      <td>
+                        Arcing may have caused pressure switch points to "weld"
+                        in closed position. Examine points and other parts of
+                        the switch for defects. Clean points or replace switch.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2. Water level in well too low:</td>
+                      <td>
+                        Well production may be too low for pump capacity.
+                        Restrict flow of pump output, wait for well to
+                        recover,and start pump. If partial restriction corrects
+                        trouble, leave valve or cock at restricted setting.
+                        Otherwise, lower pump in well if depth is sufficient. Do
+                        not lower if sand clogging might occur.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3. Leak in drop pipe:</td>
+                      <td>
+                        Raise pip and examine for leaks. Replace damaged section
+                        of drop pipe.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4. Pump parts worn:</td>
+                      <td>
+                        The presence of abrasive in the water may result in wear
+                        on the impeller, casing, and other close-clearance
+                        parts. Before pulling pump, reduce setting on pressure
+                        switch to see if pumps shuts off. If it does, worn parts
+                        are probably at fault. Pull pump and replace worn
+                        components.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section id="scroll-to-section6">
+              <div class="table-wrapper">
+                <table class="alt">
+                  <h4>Motor Does Not Start, But Fuses Do Not Blow</h4>
+                  <thead>
+                    <th>Issues</th>
+                    <th>Explanations</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1. Overload protection out:</td>
+                      <td>
+                        Check fuses or circuit breaker to see that they are
+                        operable. If fuses are blown, replace. If breaker is
+                        tripped, reset.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2. No power:</td>
+                      <td>
+                        Check power supply to control box (or overload
+                        protection box) by placing a voltmeteracross incoming
+                        power lines. Voltage should be approximate nominal line
+                        voltage. If no power is reaching box, contact an
+                        electrician for service.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3. Defective pressure switch:</td>
+                      <td>
+                        Examine wiring in control box to make sure all
+                        connections are tight. With a voltmeter, check voltage
+                        at motor wire terminals, if no voltage is shown at
+                        terminals, wiring is defective in control box. Correct
+                        faulty wiring or tighten loose contacts.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4. Defective pressure switch:</td>
+                      <td>
+                        With a voltmeter, check voltage across pressure switch
+                        while the switch is closed. If the voltage drop is equal
+                        to the line voltage, the switch is not making contact.
+                        Clean points or replace switch.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </section>
+      </div>
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <ul class="copyright">
+            <li>&copy; NOLOdev</li>
+            <li>Theme: HTML5 UP</li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+    <script src="{% static 'js/browser.min.js' %}"></script>
+    <script src="{% static 'js/breakpoints.min.js' %}"></script>
+    <script src="{% static 'js/util.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/scrolltosection.js' %}"></script>
+  </body>
+</html>
