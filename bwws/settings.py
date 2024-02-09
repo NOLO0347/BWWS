@@ -21,6 +21,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'timesheet.apps.TimesheetConfig',
     'employees.apps.EmployeesConfig',
     'pages.apps.PagesConfig',
     'django.contrib.admin',
@@ -67,8 +68,11 @@ WSGI_APPLICATION = 'bwws.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'bwwsdb',
+        'USER': 'postgres',
+        'PASSWORD': 'Cuchullan0347!',
+        'HOST': 'localhost',
     }
 }
 
