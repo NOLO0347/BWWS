@@ -1,261 +1,188 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Brown Well & Water Supply</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
-    <noscript
-      ><link rel="stylesheet" href="{% static 'css/noscript.css' %}"
-    /></noscript>
-  </head>
-  <body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Header -->
-      <header id="header" class="alt style2">
-        <a href="{% url 'index' %}" class="logo"
-          ><strong>BWWS</strong> <span>Established in 1868</span></a
-        >
-        <nav>
-          <a href="#menu">Menu</a>
-        </nav>
+{% extends 'pages/base.html' %}{% load static %} {% block content %}
+
+<!-- Main -->
+<div id="main" class="alt">
+  <!-- One -->
+  <section id="one">
+    <div class="inner">
+      <header class="major">
+        <h1>Submersible Pumps</h1>
       </header>
 
-      <!-- Menu -->
-      <nav id="menu">
-        <ul class="links">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="{% url 'timesheet' %}">Timesheet</a></li>
-          <li><a href="{% url 'tools' %}">Tools</a></li>
-          <li><a href="{% url 'info' %}">Info & Troubleshooting</a></li>
-        </ul>
-        <ul class="actions stacked">
-          <li><a href="#" class="button fit">Log In</a></li>
-        </ul>
-      </nav>
-
-      <!-- Main -->
-      <div id="main" class="alt">
-        <!-- One -->
-        <section id="one">
-          <div class="inner">
-            <header class="major">
-              <h1>Submersible Pumps</h1>
-            </header>
-
-            <span class="image left"
-              ><img src="{% static 'images/subpu.jpg' %}" alt=""
-            /></span>
-            <h2>
-              <strong>What is a Submersible Pump?</strong>
-            </h2>
-            <p>
-              Like it's name suggests, a submersible well pump is installed
-              inside your home's water well, submerged under the water line.
-              Designed for wells that run 50 feet deep or more, their depth
-              allows them to push water up into a pipe that delivers the water
-              to your storage tank.
-            </p>
-            <br />
-            <h3>Advantages of a submersible pump</h3>
-            <p>
-              The number one benefit to this kind of well pump is its
-              efficiency. Because the pump is already in the water, it's able to
-              push the water up which uses energy more effectively. This offers
-              several benefits including:
-            </p>
-            <ul>
-              <li>
-                <strong>Durability</strong> - They don't have to work as hard to
-                move water into the home.
-              </li>
-              <li>
-                <strong>Speed</strong> - There's already water in the pump, so
-                there's no need to prime it to get water into the house, saving
-                time.
-              </li>
-              <li>
-                <strong>Pressure</strong> - A submersible pump provides
-                stronger, more consistent water pressure.
-              </li>
-              <br />
-              <p>
-                Additionally, submersible pumps are generally convenient because
-                they are portable and can be moved as needed, don't take up any
-                property space outside the well, and run more quietly than jet
-                pumps.
-              </p>
-            </ul>
-            <h3>Disadvantages of a Submersible Pump</h3>
-            <p>
-              Submersibles need to go directly into the well, so they are a bit
-              more complicated to install, and should only be put in by
-              experienced well pump technicians. Also, while it's unlikely that
-              they will overheat because of the continuous flow of water around
-              the pump, heat can accumulate within the compartment which can
-              lead to a risk of overheating. The biggest drawback to a
-              submersible pump is the cost of purchase and well pump maintenance
-              is greater than a standard pump.
-            </p>
-            <h3>The Difference Between 2-Wire and 3-Wire Submersible Pumps</h3>
-            <p>
-              For any type of electric deep well pump, the main differences in
-              the wiring will depend on the horsepower of the motor running on
-              the pump, and where the starting components on the pump are
-              located (like the relay and start capacitor). Without getting into
-              too much engineering and physics, just know that three-wire
-              configurations are used in well pumps that demand more power to
-              start and require motors larger than 1.5 HP (horsepower).
-              <br />
-              All well pumps will have a ground wire, but when distinguishing
-              between the two types of submersible pumps, the ground wire is not
-              counted.
-            </p>
-            <h4>Two-Wire Pumps</h4>
-            <p>
-              With the way 2-wire submersible pumps are configured, the motor
-              will be connected by two main (black/black, black/red,
-              black/white, etc..) wires and a <strong>green</strong> ground
-              wire. The starting components will be located inside the motor
-              itself, making it much more difficult to access after installation
-              should you ever need to inspect or repair the pump. In this case,
-              you would have to pull the pump out of its installation location
-              in order to inspect it. <br />
-              <br />
-              But, because everything is built inside the pump casing,
-              installation is easier and faster as well. Two-wire pumps are also
-              less likely to fail because of the way they are built and have
-              fewer components overall. However, if a problem does occur, they
-              are much more expensive to repair or replace.
-            </p>
-            <div class="table-wrapper">
-              <table class="alt">
-                <thead>
-                  <th>2 Wire Pumps</th>
-                  <th>Pros</th>
-                  <th>Cons</th>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><strong>Installation</strong></td>
-                    <td>Easy and fast installation; no control box needed</td>
-                    <td>Need to pull the pump for repairs and inspections</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Repairs</strong></td>
-                    <td>
-                      Fewer parts; less chance of failure because parts are
-                      sealed in pump casing
-                    </td>
-                    <td>More time consuming/expensive to service or repair</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Maintenance</strong></td>
-                    <td>Designed for less overall maintenance</td>
-                    <td>
-                      The motor needs to be replaced if broken; can't repair
-                      individual parts that fail
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><strong>Cost/Life Span</strong></td>
-                    <td>Less expensive up-front costs</td>
-                    <td>Shorter overall lifespan</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <h4>Three Wire Pumps</h4>
-            <p>
-              In a 3-wire well pump configuration, the motor is connected by a
-              black, red, yellow, and green (ground) wire. Three-wire pumps
-              utilize a separate control box outside the pump that houses the
-              important starting components, which is usually mounted on a
-              nearby wall or strut above the ground. This makes installation
-              more intensive, however, it makes it easier and cheaper to
-              maintain and replace individual parts instead of the entire motor
-              if something ever goes wrong. <br /><br />
-              Though it is true that 3-wire pump configurations have more parts
-              and thus a higher chance of needing repair and maintenance, the
-              separate control box makes it simple to access the main components
-              without having to remove the well pump from its installation
-              location. Additionally, because there are more parts in a 3-wire
-              system, it's possible that repairs would be cheaper and faster to
-              fix since only one part of the system may need to work done, as
-              opposed to the entire motor needing replacement in a 2-wire pump.
-            </p>
-            <div class="table-wrapper">
-              <table class="alt">
-                <thead>
-                  <th>3 Wire Pumps</th>
-                  <th>Pros</th>
-                  <th>Cons</th>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><strong>Installation</strong></td>
-                    <td>
-                      Easy access to starting components for maintenance/repairs
-                    </td>
-                    <td>Less convenient and more difficult to install</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Repairs</strong></td>
-                    <td>
-                      Don't need to remove the pump for inspections/repair
-                    </td>
-                    <td>May need to repair more often</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Maintenance</strong></td>
-                    <td>
-                      Can replace individual parts, instead of the whole motor
-                    </td>
-                    <td>More parts; a higher chance of failure</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Cost/Life Span</strong></td>
-                    <td>Longer lifespan</td>
-                    <td>A more expensive up-front cost</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Power</strong></td>
-                    <td>
-                      More Powerful; required for more powerful 1.5HP+ motors
-                    </td>
-                    <td>Uses more electricity</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
+      <span class="image left"
+        ><img src="{% static 'images/subpu.jpg' %}" alt=""
+      /></span>
+      <h2>
+        <strong>What is a Submersible Pump?</strong>
+      </h2>
+      <p>
+        Like it's name suggests, a submersible well pump is installed inside
+        your home's water well, submerged under the water line. Designed for
+        wells that run 50 feet deep or more, their depth allows them to push
+        water up into a pipe that delivers the water to your storage tank.
+      </p>
+      <br />
+      <h3>Advantages of a submersible pump</h3>
+      <p>
+        The number one benefit to this kind of well pump is its efficiency.
+        Because the pump is already in the water, it's able to push the water up
+        which uses energy more effectively. This offers several benefits
+        including:
+      </p>
+      <ul>
+        <li>
+          <strong>Durability</strong> - They don't have to work as hard to move
+          water into the home.
+        </li>
+        <li>
+          <strong>Speed</strong> - There's already water in the pump, so there's
+          no need to prime it to get water into the house, saving time.
+        </li>
+        <li>
+          <strong>Pressure</strong> - A submersible pump provides stronger, more
+          consistent water pressure.
+        </li>
+        <br />
+        <p>
+          Additionally, submersible pumps are generally convenient because they
+          are portable and can be moved as needed, don't take up any property
+          space outside the well, and run more quietly than jet pumps.
+        </p>
+      </ul>
+      <h3>Disadvantages of a Submersible Pump</h3>
+      <p>
+        Submersibles need to go directly into the well, so they are a bit more
+        complicated to install, and should only be put in by experienced well
+        pump technicians. Also, while it's unlikely that they will overheat
+        because of the continuous flow of water around the pump, heat can
+        accumulate within the compartment which can lead to a risk of
+        overheating. The biggest drawback to a submersible pump is the cost of
+        purchase and well pump maintenance is greater than a standard pump.
+      </p>
+      <h3>The Difference Between 2-Wire and 3-Wire Submersible Pumps</h3>
+      <p>
+        For any type of electric deep well pump, the main differences in the
+        wiring will depend on the horsepower of the motor running on the pump,
+        and where the starting components on the pump are located (like the
+        relay and start capacitor). Without getting into too much engineering
+        and physics, just know that three-wire configurations are used in well
+        pumps that demand more power to start and require motors larger than 1.5
+        HP (horsepower).
+        <br />
+        All well pumps will have a ground wire, but when distinguishing between
+        the two types of submersible pumps, the ground wire is not counted.
+      </p>
+      <h4>Two-Wire Pumps</h4>
+      <p>
+        With the way 2-wire submersible pumps are configured, the motor will be
+        connected by two main (black/black, black/red, black/white, etc..) wires
+        and a <strong>green</strong> ground wire. The starting components will
+        be located inside the motor itself, making it much more difficult to
+        access after installation should you ever need to inspect or repair the
+        pump. In this case, you would have to pull the pump out of its
+        installation location in order to inspect it. <br />
+        <br />
+        But, because everything is built inside the pump casing, installation is
+        easier and faster as well. Two-wire pumps are also less likely to fail
+        because of the way they are built and have fewer components overall.
+        However, if a problem does occur, they are much more expensive to repair
+        or replace.
+      </p>
+      <div class="table-wrapper">
+        <table class="alt">
+          <thead>
+            <th>2 Wire Pumps</th>
+            <th>Pros</th>
+            <th>Cons</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Installation</strong></td>
+              <td>Easy and fast installation; no control box needed</td>
+              <td>Need to pull the pump for repairs and inspections</td>
+            </tr>
+            <tr>
+              <td><strong>Repairs</strong></td>
+              <td>
+                Fewer parts; less chance of failure because parts are sealed in
+                pump casing
+              </td>
+              <td>More time consuming/expensive to service or repair</td>
+            </tr>
+            <tr>
+              <td><strong>Maintenance</strong></td>
+              <td>Designed for less overall maintenance</td>
+              <td>
+                The motor needs to be replaced if broken; can't repair
+                individual parts that fail
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Cost/Life Span</strong></td>
+              <td>Less expensive up-front costs</td>
+              <td>Shorter overall lifespan</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-
-      <!-- Footer -->
-      <footer id="footer">
-        <div class="inner">
-          <ul class="copyright">
-            <li>&copy; NOLOdev</li>
-            <li>Theme: HTML5 UP</li>
-            <li>Article: thePUMPBOOK</li>
-          </ul>
-        </div>
-      </footer>
+      <h4>Three Wire Pumps</h4>
+      <p>
+        In a 3-wire well pump configuration, the motor is connected by a black,
+        red, yellow, and green (ground) wire. Three-wire pumps utilize a
+        separate control box outside the pump that houses the important starting
+        components, which is usually mounted on a nearby wall or strut above the
+        ground. This makes installation more intensive, however, it makes it
+        easier and cheaper to maintain and replace individual parts instead of
+        the entire motor if something ever goes wrong. <br /><br />
+        Though it is true that 3-wire pump configurations have more parts and
+        thus a higher chance of needing repair and maintenance, the separate
+        control box makes it simple to access the main components without having
+        to remove the well pump from its installation location. Additionally,
+        because there are more parts in a 3-wire system, it's possible that
+        repairs would be cheaper and faster to fix since only one part of the
+        system may need to work done, as opposed to the entire motor needing
+        replacement in a 2-wire pump.
+      </p>
+      <div class="table-wrapper">
+        <table class="alt">
+          <thead>
+            <th>3 Wire Pumps</th>
+            <th>Pros</th>
+            <th>Cons</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Installation</strong></td>
+              <td>
+                Easy access to starting components for maintenance/repairs
+              </td>
+              <td>Less convenient and more difficult to install</td>
+            </tr>
+            <tr>
+              <td><strong>Repairs</strong></td>
+              <td>Don't need to remove the pump for inspections/repair</td>
+              <td>May need to repair more often</td>
+            </tr>
+            <tr>
+              <td><strong>Maintenance</strong></td>
+              <td>Can replace individual parts, instead of the whole motor</td>
+              <td>More parts; a higher chance of failure</td>
+            </tr>
+            <tr>
+              <td><strong>Cost/Life Span</strong></td>
+              <td>Longer lifespan</td>
+              <td>A more expensive up-front cost</td>
+            </tr>
+            <tr>
+              <td><strong>Power</strong></td>
+              <td>More Powerful; required for more powerful 1.5HP+ motors</td>
+              <td>Uses more electricity</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
+  </section>
+</div>
 
-    <!-- Scripts -->
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
-    <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
-    <script src="{% static 'js/browser.min.js' %}"></script>
-    <script src="{% static 'js/breakpoints.min.js' %}"></script>
-    <script src="{% static 'js/util.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
-  </body>
-</html>
+{% endblock %}

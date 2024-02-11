@@ -1,20 +1,30 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import auth, messages
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login, logout
 
 
 
 def index(request):
-    return render(request, 'pages/index.html')
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('index')
+        else:
+            messages.success(request, 'Invalid Username or Password')
+            return redirect('index')
+    else:
+        return render(request, 'pages/index.html')
 
-# Authentication
 
-def login(request):
-    return render(request, 'pages/login.html')
-
-def logout(request):
-    return render(request, 'pages/logout.html')
+def logout_user(request):
+    logout(request)
+    return redirect('index')
 
 # Timesheet
-
 def timesheet(request):
     return render(request, 'pages/timesheet.html')
 

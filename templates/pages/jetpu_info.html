@@ -1,186 +1,120 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Brown Well & Water Supply</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
-    <noscript
-      ><link rel="stylesheet" href="{% static 'css/noscript.css' %}"
-    /></noscript>
-  </head>
-  <body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Header -->
-      <header id="header" class="alt style2">
-        <a href="{% url 'index' %}" class="logo"
-          ><strong>BWWS</strong> <span>Established in 1868</span></a
-        >
-        <nav>
-          <a href="#menu">Menu</a>
-        </nav>
+{% extends 'pages/base.html' %}{% load static %} {% block content %}
+<!-- Main -->
+<div id="main" class="alt">
+  <!-- One -->
+  <section id="one">
+    <div class="inner">
+      <header class="major">
+        <h1>Jet Pumps</h1>
       </header>
 
-      <!-- Menu -->
-      <nav id="menu">
-        <ul class="links">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="{% url 'timesheet' %}">Timesheet</a></li>
-          <li><a href="{% url 'tools' %}">Tools</a></li>
-          <li><a href="{% url 'info' %}">Info & Troubleshooting</a></li>
-        </ul>
-        <ul class="actions stacked">
-          <li><a href="#" class="button fit">Log In</a></li>
-        </ul>
-      </nav>
-
-      <!-- Main -->
-      <div id="main" class="alt">
-        <!-- One -->
-        <section id="one">
-          <div class="inner">
-            <header class="major">
-              <h1>Jet Pumps</h1>
-            </header>
-
-            <span class="image left"
-              ><img src="{% static 'images/fig1.jpg' %}" alt="" />Figure 1</span
-            >
-            <h2>
-              <strong
-                >What is a jet pump and how does it differ from a centrifugal
-                pump?</strong
-              >
-            </h2>
-            <p>
-              A jet pump actually is two pumps in one: a centrifugal pump and a
-              jet assembly, commonly called an injector. Figure 1 shows a
-              typical <b> shallow well </b> jet pump. Parts 1, 2, and 3, the
-              adapter, nozzle and venturi on the left side of the pump are the
-              injector or jet components. We refer to the entire package – the
-              centrifugal pump and injector – as the jet pump. The centrifugal
-              pump part of a jet pump package is specifically designed to
-              operate in conjunction with an injector, and the injector enhances
-              a centrifugal pumps pressure capability by about 50 percent.
-              Shallow well jets have the injector attached to the pump above
-              ground level and are limited to about 25 feet of lift, just like
-              straight centrifugal pumps. Their only advantage over a straight
-              centrifugal is their pressure boosting capability. <br />
-              <br />
-              <b> Deep well </b> jet pumps, on the other hand, have their jet
-              injector down in the well below the water level, so they push the
-              water to the surface. <br />
-              See Figure 2. Deep well jet pumps are not limited by atmospheric
-              pressure to 25 feet of lift. A good deep well jet can pump water
-              from as deep as 200 feet. Remember, when we say we are pumping
-              from 200 feet, we are referring to the distance from the surface
-              of the water in the well to the discharge point at or above ground
-              level, not from the injector to the discharge point. <br />
-              <br />
-              If the jet pump is so designed that the injector can be either
-              attached directly to the pump or located down in the well, it is
-              known as a convertible jet pump. Convertible jet pumps therefore
-              can be operated as either a shallow well jet or a deep well jet.
-              With that background, we now will look at the jet assembly to see
-              how it functions.
-            </p>
-            <br />
-            <span class="image left"
-              ><img src="{% static 'images/fig2.jpg' %}" alt="" />Figure 2</span
-            >
-            <p>
-              The jet assembly or injector consists of three major parts — the
-              jet body, the nozzle and the venturi. Here is how it works: With
-              the centrifugal pump primed and pumping, a portion of the water
-              leaving the impeller is diverted back to the injector. The amount
-              of water diverted is determined by the pump design in a shallow
-              well jet and is not adjustable. In deep well jets and convertible
-              jets, it is adjustable by means of a control valve, which is the
-              subject of next month’s article. Figure 3 shows a deep well
-              injector. This diverted portion that powers the injector, called
-              drive water, is directed through the nozzle where it accelerates
-              just like water passing through the nozzle at the end of a garden
-              hose. The drive water stream is directed through a gap toward the
-              venturi, creating a partial vacuum at the gap. Here, atmospheric
-              pressure forces product water (well water) to enter the injector
-              and mix with drive water as it enters the venturi. The outward
-              flair of the venturi reduces the velocity of the stream as it
-              passes through, converting it back into pressure and directing it
-              into the eye of the impeller where it is further pressurized. Upon
-              leaving the impeller, a portion exits the pump to become service
-              water, and the rest is returned to the injector as drive water.
-            </p>
-            <br /><br />
-            <span class="image left"
-              ><img src="{% static 'images/fig3.jpg' %}" alt="" />Figure 3</span
-            >
-            <p>
-              In a shallow well application, a single pipe is connected to the
-              inlet of the injector and extended down into the well. In a deep
-              well application, the injector is down in the well, requiring two
-              water passages from the pump into the well, one for feed water and
-              the other for product water. As you’ll see in the following
-              paragraph, one of the passages can be the well casing. For right
-              now, we will refer to both passages as pipes. The feed water pipe
-              is often called the pressure pipe, and product water pipe is often
-              referred to as the suction pipe, which is a bit of a misnomer
-              since it too is under pressure. I prefer to call the product water
-              pipe the discharge pipe, and it should be one size larger than the
-              feed pipe since it carries more water. <br />
-              Deep well systems are broken down into two sub-types, double-pipe
-              and single-pipe. When the well casing is four inches or larger in
-              diameter, a double-pipe system normally is preferred. Where the
-              well casing is smaller than four inches in diameter, a single-pipe
-              deep well injector can be used. It differs from a standard
-              two-pipe deep well injector in that it is smaller in diameter, is
-              hung from a single suction pipe and includes packers that seal
-              against the casing. A well casing adapter seals the top of the
-              casing and provides a means of introducing feed water into the
-              casing. With both ends sealed, the well casing acts as the second
-              pipe for the drive water. Obviously, for a single pipe injector to
-              work properly, the casing must be in good shape. <br /><br />
-              To keep jet pumps primed, it is important to install a foot valve
-              at the bottom of the suction pipe to prevent the water in the
-              system from draining back into the well when the pump is off. This
-              applies to all types of jet pumps. <br /><br />A question that
-              often comes up: Will a jet pump work without the jet? The answer
-              is yes, but… Yes, because it will pump water, but no, because it
-              may destroy itself by pumping too much water. One of the
-              advantages of a jet pump is that it cannot be overloaded on the
-              horsepower curve because we create artificial head with the
-              pressure regulator and nozzle. Without the jet assembly, a jet
-              pump can pump beyond its curve, draw too much power, overheat the
-              motor and possibly burn it up. Bottom line: Don’t use a jet pump
-              without the injector.
-            </p>
-          </div>
-        </section>
-      </div>
-
-      <!-- Footer -->
-      <footer id="footer">
-        <div class="inner">
-          <ul class="copyright">
-            <li>&copy; NOLOdev</li>
-            <li>Theme: HTML5 UP</li>
-            <li>Article: thePUMPBOOK</li>
-          </ul>
-        </div>
-      </footer>
+      <span class="image left"
+        ><img src="{% static 'images/fig1.jpg' %}" alt="" />Figure 1</span
+      >
+      <h2>
+        <strong
+          >What is a jet pump and how does it differ from a centrifugal
+          pump?</strong
+        >
+      </h2>
+      <p>
+        A jet pump actually is two pumps in one: a centrifugal pump and a jet
+        assembly, commonly called an injector. Figure 1 shows a typical
+        <b> shallow well </b> jet pump. Parts 1, 2, and 3, the adapter, nozzle
+        and venturi on the left side of the pump are the injector or jet
+        components. We refer to the entire package – the centrifugal pump and
+        injector – as the jet pump. The centrifugal pump part of a jet pump
+        package is specifically designed to operate in conjunction with an
+        injector, and the injector enhances a centrifugal pumps pressure
+        capability by about 50 percent. Shallow well jets have the injector
+        attached to the pump above ground level and are limited to about 25 feet
+        of lift, just like straight centrifugal pumps. Their only advantage over
+        a straight centrifugal is their pressure boosting capability. <br />
+        <br />
+        <b> Deep well </b> jet pumps, on the other hand, have their jet injector
+        down in the well below the water level, so they push the water to the
+        surface. <br />
+        See Figure 2. Deep well jet pumps are not limited by atmospheric
+        pressure to 25 feet of lift. A good deep well jet can pump water from as
+        deep as 200 feet. Remember, when we say we are pumping from 200 feet, we
+        are referring to the distance from the surface of the water in the well
+        to the discharge point at or above ground level, not from the injector
+        to the discharge point. <br />
+        <br />
+        If the jet pump is so designed that the injector can be either attached
+        directly to the pump or located down in the well, it is known as a
+        convertible jet pump. Convertible jet pumps therefore can be operated as
+        either a shallow well jet or a deep well jet. With that background, we
+        now will look at the jet assembly to see how it functions.
+      </p>
+      <br />
+      <span class="image left"
+        ><img src="{% static 'images/fig2.jpg' %}" alt="" />Figure 2</span
+      >
+      <p>
+        The jet assembly or injector consists of three major parts — the jet
+        body, the nozzle and the venturi. Here is how it works: With the
+        centrifugal pump primed and pumping, a portion of the water leaving the
+        impeller is diverted back to the injector. The amount of water diverted
+        is determined by the pump design in a shallow well jet and is not
+        adjustable. In deep well jets and convertible jets, it is adjustable by
+        means of a control valve, which is the subject of next month’s article.
+        Figure 3 shows a deep well injector. This diverted portion that powers
+        the injector, called drive water, is directed through the nozzle where
+        it accelerates just like water passing through the nozzle at the end of
+        a garden hose. The drive water stream is directed through a gap toward
+        the venturi, creating a partial vacuum at the gap. Here, atmospheric
+        pressure forces product water (well water) to enter the injector and mix
+        with drive water as it enters the venturi. The outward flair of the
+        venturi reduces the velocity of the stream as it passes through,
+        converting it back into pressure and directing it into the eye of the
+        impeller where it is further pressurized. Upon leaving the impeller, a
+        portion exits the pump to become service water, and the rest is returned
+        to the injector as drive water.
+      </p>
+      <br /><br />
+      <span class="image left"
+        ><img src="{% static 'images/fig3.jpg' %}" alt="" />Figure 3</span
+      >
+      <p>
+        In a shallow well application, a single pipe is connected to the inlet
+        of the injector and extended down into the well. In a deep well
+        application, the injector is down in the well, requiring two water
+        passages from the pump into the well, one for feed water and the other
+        for product water. As you’ll see in the following paragraph, one of the
+        passages can be the well casing. For right now, we will refer to both
+        passages as pipes. The feed water pipe is often called the pressure
+        pipe, and product water pipe is often referred to as the suction pipe,
+        which is a bit of a misnomer since it too is under pressure. I prefer to
+        call the product water pipe the discharge pipe, and it should be one
+        size larger than the feed pipe since it carries more water. <br />
+        Deep well systems are broken down into two sub-types, double-pipe and
+        single-pipe. When the well casing is four inches or larger in diameter,
+        a double-pipe system normally is preferred. Where the well casing is
+        smaller than four inches in diameter, a single-pipe deep well injector
+        can be used. It differs from a standard two-pipe deep well injector in
+        that it is smaller in diameter, is hung from a single suction pipe and
+        includes packers that seal against the casing. A well casing adapter
+        seals the top of the casing and provides a means of introducing feed
+        water into the casing. With both ends sealed, the well casing acts as
+        the second pipe for the drive water. Obviously, for a single pipe
+        injector to work properly, the casing must be in good shape.
+        <br /><br />
+        To keep jet pumps primed, it is important to install a foot valve at the
+        bottom of the suction pipe to prevent the water in the system from
+        draining back into the well when the pump is off. This applies to all
+        types of jet pumps. <br /><br />A question that often comes up: Will a
+        jet pump work without the jet? The answer is yes, but… Yes, because it
+        will pump water, but no, because it may destroy itself by pumping too
+        much water. One of the advantages of a jet pump is that it cannot be
+        overloaded on the horsepower curve because we create artificial head
+        with the pressure regulator and nozzle. Without the jet assembly, a jet
+        pump can pump beyond its curve, draw too much power, overheat the motor
+        and possibly burn it up. Bottom line: Don’t use a jet pump without the
+        injector.
+      </p>
     </div>
+  </section>
+</div>
 
-    <!-- Scripts -->
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
-    <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
-    <script src="{% static 'js/browser.min.js' %}"></script>
-    <script src="{% static 'js/breakpoints.min.js' %}"></script>
-    <script src="{% static 'js/util.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
-  </body>
-</html>
+{% endblock %}

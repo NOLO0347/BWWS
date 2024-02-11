@@ -72,7 +72,12 @@ input, select, textarea {
 .calculator {
 	max-width: 680px; /* Adjust the value as needed */
 	margin: 0 left; /* Center the calculator horizontally */
-  }
+}
+
+.message-container {
+    text-align: center;
+}
+
 
 
 /* Basic */

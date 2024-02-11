@@ -1,222 +1,28 @@
-{% load static %}
-<!DOCTYPE html>
+{% extends 'pages/base.html' %} {% load static %} {% block content %} 
 
-<html>
-  <head>
-    <title>Brown Well & Water Supply</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
-    <noscript
-      ><link rel="stylesheet" href="{% static 'css/noscript.css' %}"
-    /></noscript>
-  </head>
-  <body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Header -->
-      <!-- Note: The "styleN" class below should match that of the banner element. -->
-      <header id="header" class="alt style2">
-        <a href="{% url 'index' %}" class="logo"
-          ><strong>BWWS</strong> <span>Established in 1868</span></a
-        >
-        <nav>
-          <a href="#menu">Menu</a>
-        </nav>
+<!-- Main -->
+<div id="main" class="alt">
+  <!-- One -->
+  <section id="one">
+    <div class="inner">
+      <header class="major">
+        <h1>Information and Troubleshooting</h1>
       </header>
-
-      <!-- Menu -->
-      <nav id="menu">
-        <ul class="links">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="{% url 'timesheet' %}">Timesheet</a></li>
-          <li><a href="{% url 'tools' %}">Tools</a></li>
-          <li><a href="{% url 'info' %}">Info & Troubleshooting</a></li>
-        </ul>
-        <ul class="actions stacked">
-          <li><a href="#" class="button fit">Log In</a></li>
-        </ul>
-      </nav>
-
-      <!-- Banner -->
-      <!-- Note: The "styleN" class below should match that of the header element. -->
-      <section id="banner" class="style2">
-        <div class="inner">
-          <span class="image">
-            <img src="{% static 'images/pic07.jpg' %}" alt="pic07" />
-          </span>
-          <header class="major">
-            <h1>Employee Database</h1>
-          </header>
-          <div class="content">
-            <p>
-              Water Well Drilling, Repair, Replacement, and Water Filtration
-              Supplies
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Main -->
-      <div id="main">
-        <!-- One -->
-        <section id="one">
-          <div class="inner">
-            <header class="major">
-              <h2>Our Reputation Sets Us Apart</h2>
-            </header>
-            <p>
-              Choosing Brown Well & Water Supply means you can stop searching
-              for well drilling companies. You will have us for life. Our
-              company was founded in 1868. You will find one of the benefits of
-              choosing an established well drilling company like ours is that
-              you can call on us anytime for well service long after your well
-              installation or repair. We have been around for 150 years and we
-              are not going anywhere. Plus our experience speaks for itself. We
-              have installed just about every type of well and have worked
-              through multiple scenarios providing quality well installations
-              from start to finish. <br />
-              You will quickly see our reputation sets us apart from our
-              competitors that may not offer maintenance programs or warranty
-              guarantees. And we do not stop at well services. We also utilize
-              and install some of the top performing water filtration systems in
-              the industry like reverse osmosis and ultraviolet light systems.
-              <a href="https://www.brownwellsupply.com/">Contact us</a>
-              today or visit us in store to learn more about our well systems,
-              purchase parts, and get expert advice. We are here to help our
-              long time neighbors and friends!
-            </p>
-          </div>
-        </section>
-
-        <!-- Two -->
-        <section id="two" class="spotlights">
-          <section>
-            <div class="image">
-              <img
-                src="{% static 'images/bwwsbuilding.jpg' %}"
-                alt="bwwsbuilding"
-                data-position="center center"
-              />
-            </div>
-            <div class="content">
-              <div class="inner">
-                <header class="major">
-                  <h3>Water Well Drilling Company</h3>
-                </header>
-                <p>
-                  Well drilling is a detailed process that ensures fresh running
-                  water for your home or business. Our team of experienced
-                  technicians will take a look at your situation and determine
-                  the best course of action to take.
-                </p>
-              </div>
-            </div>
-          </section>
-          <section>
-            <div class="image">
-              <img
-                src="{% static 'images/bwwsrepair.jpg' %}"
-                alt="bwwsrepair"
-                data-position="top center"
-              />
-            </div>
-            <div class="content">
-              <div class="inner">
-                <header class="major">
-                  <h3>No Water - Well Pump Repair Service</h3>
-                </header>
-                <p>
-                  One of the most common problems that require well repair is a
-                  faulty well pump. Our professional technicians will come out
-                  to your water well and diagnose the problem to get your water
-                  back quickly.
-                </p>
-              </div>
-            </div>
-          </section>
-          <section>
-            <div class="image">
-              <img
-                src="{% static 'images/bwwsfiltration.jpeg' %}"
-                alt="bwwsfiltration"
-                data-position="25% 25%"
-              />
-            </div>
-            <div class="content">
-              <div class="inner">
-                <header class="major">
-                  <h3>Water Filtration, Treatment, and Purification</h3>
-                </header>
-                <p>
-                  Installing a water filtration system inside your home or
-                  business is one of the best ways to improve fresh water for
-                  drinking, washing or cooking. We will provided test based
-                  recommendations to mitigate contaminants in your water system.
-                </p>
-              </div>
-            </div>
-          </section>
-        </section>
-
-        <!-- Three -->
-        <section id="three">
-          <div class="inner">
-            <header class="major">
-              <h2>About our well company - 150 years of success</h2>
-            </header>
-            <p>
-              Our store location in Granite Quarry, NC in Rowan County is one of
-              the original buildings in town, formerly the Town Hall building.
-              We were founded in 1868 and have since been established in the
-              community serving our long-time neighbors, friends, and their
-              friends. Hiring our team at Brown Well & Water Supply means you no
-              longer have to continue your search for well companies that offer
-              comprehensive water well services. We offer just about anything
-              you need if it pertains to your well or water supply. Choosing to
-              work with an established well company like ours means you'll get
-              ongoing water well service, including warranty work, long after a
-              well installation or water filtration system installation. Other
-              franchises may up and leave and leave you with a lapse in warranty
-              or no coverage. Not us. We are not going anywhere and our years of
-              service demonstrate our dedication. We are expert well drillers
-              and are comfortable working through numerous scenarios no matter
-              how challenging. The team at Brown Well & Water Supply has been
-              providing dependable well drilling and setup for decades to
-              residential property owners and businesses alike.
-            </p>
-            <ul class="actions">
-              <li>
-                <a href="https://www.brownwellsupply.com/" class="button next"
-                  >Contact Us</a
-                >
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
-
-      <!-- Footer -->
-      <footer id="footer">
-        <div class="inner">
-          <ul class="copyright">
-            <li>&copy; NOLOdev</li>
-            <li>Theme: HTML5 UP</li>
-          </ul>
-        </div>
-      </footer>
+      <ul class="alt">
+        <h4>Information:</h4>
+        <li><a href="{% url 'jetpu_info' %}">Jet Pumps</a></li>
+        <li><a href="{% url 'subpu_info' %}">Submersible Pumps</a></li>
+        <li><a href="{% url 'tanks_info' %}">Pressure Tanks</a></li>
+        <li><a href="{% url 'pres_info' %}">Water Pressure & Friction</a></li>
+        <li><a href="{% url 'wiresizing_info' %}">Wire Sizing</a></li>
+      </ul>
+      <br />
+      <ul class="alt">
+        <h4>Troubleshooting:</h4>
+        <li><a href="{% url 'jetpu_tr' %}">Jet Pumps</a></li>
+        <li><a href="{% url 'subpu_tr' %}">Submersible Pumps</a></li>
+      </ul>
     </div>
-
-    <!-- Scripts -->
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
-    <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
-    <script src="{% static 'js/browser.min.js' %}"></script>
-    <script src="{% static 'js/breakpoints.min.js' %}"></script>
-    <script src="{% static 'js/util.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
-  </body>
-</html>
+  </section>
+</div>
+{% endblock %}

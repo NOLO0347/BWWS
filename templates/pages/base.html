@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BWWS Employee Database</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <noscript
+      ><link rel="stylesheet" href="{% static 'css/noscript.css' %}"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt style2">
+        <a href="{% url 'index' %}" class="logo"><strong>BWWS</strong></a>
+        <span>{{ user.username }}</span>
+
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="{% url 'tools' %}">Tools</a></li>
+          <li><a href="{% url 'timesheet' %}">Timesheet</a></li>
+          <li><a href="{% url 'index' %}">Info & Troubleshooting</a></li>
+        </ul>
+        <ul class="actions stacked">
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'logout' %}" class="button fit">Log Out</a></li>
+          {% else %}
+          <li><a href="{% url 'index' %}" class="button fit">Log In</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+      <!-- Main -->
+      <div id="main" class="alt">
+        <!-- One -->
+        <section id="one">
+          <div class="inner">
+            <h1 style="text-align: center;">BWWS Employee Database</h1>
+              <h2 style="text-align:center">Please Login</h2>
+             <div class="message-container"> 
+            {% if messages %} {% for message in messages %} {{ message }} 
+            {% endfor %} {% endif %} 
+            {% if user.is_authenticated %} 
+            {% block content %} 
+            {% endblock %} 
+            {% else %}
+            </div>
+            <form action="{% url 'index' %}" method="POST">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="exampleInputUsername">Username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputUsername"
+                  aria-describedby="usernameHelp"
+                  placeholder="Ex. John.Doe"
+                  name="username"
+                  required
+                />
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Password"
+                  name="password"
+                  required
+                />
+                <div id="passwordhelp" class="form-text"><sup> Contact management to recover your username or password</sup></div>
+              </div>
+              <br />
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            {% endif %}
+          </div>
+        </section>
+      </div>
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <ul class="copyright">
+            <li>&copy; NOLOdev</li>
+            <li>Theme: HTML5 UP</li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+    <script src="{% static 'js/browser.min.js' %}"></script>
+    <script src="{% static 'js/breakpoints.min.js' %}"></script>
+    <script src="{% static 'js/util.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/scrolltosection.js' %}"></script>
+    <script src="{% static 'js/chlor_calc.js' %}"></script>
+  </body>
+</html>

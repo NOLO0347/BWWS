@@ -1,236 +1,163 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Brown Well & Water Supply</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
-    <noscript
-      ><link rel="stylesheet" href="{% static 'css/noscript.css' %}"
-    /></noscript>
-  </head>
-  <body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Header -->
-      <header id="header" class="alt style2">
-        <a href="{% url 'index' %}" class="logo"
-          ><strong>BWWS</strong> <span>Established in 1868</span></a
-        >
-        <nav>
-          <a href="#menu">Menu</a>
-        </nav>
+{% extends 'pages/base.html' %}{% load static %} {% block content %}
+<!-- Main -->
+<div id="main" class="alt">
+  <!-- One -->
+  <section id="one">
+    <div class="inner">
+      <header class="major">
+        <h1>Pressure Tanks</h1>
       </header>
 
-      <!-- Menu -->
-      <nav id="menu">
-        <ul class="links">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="{% url 'timesheet' %}">Timesheet</a></li>
-          <li><a href="{% url 'tools' %}">Tools</a></li>
-          <li><a href="{% url 'info' %}">Info & Troubleshooting</a></li>
-        </ul>
-        <ul class="actions stacked">
-          <li><a href="#" class="button fit">Log In</a></li>
-        </ul>
-      </nav>
-
-      <!-- Main -->
-      <div id="main" class="alt">
-        <!-- One -->
-        <section id="one">
-          <div class="inner">
-            <header class="major">
-              <h1>Pressure Tanks</h1>
-            </header>
-
-            <p>
-              There are two primary reasons for having a pressure tank in a
-              pumped water system. The first is to give the pump motor a minute
-              or two to dissipate the extra heat energy generated each time the
-              pump starts, and the second is to store water under pressure so
-              the pump does not have to come on every time there is a small,
-              intermittent demand for water. The amount of usable water stored
-              in a pressure tank is called the drawdown; it is the amount of
-              water that can be drawn from the tank between the time the
-              pressure switch cuts out, turning off the pump, and it cuts back
-              in, turning on the pump. Tanks are sized with enough drawdown to
-              allow the pump to run for a minute or so between cycles, as
-              recommended by the motor manufacturers. A 10-gpm residential water
-              system pump would require a pressure tank with 10 gallons of
-              drawdown, for instance. There are two types of pressure tanks -
-              captive-air tanks (also called pre-charged, diaphragm or bladder
-              tanks), and conventional tanks (also known as hydro-pneumatic,
-              galvanized, ASME and epoxy-lined tanks). Using the term
-              “hydro-pneumatic” to describe a conventional tank is a bit of a
-              misnomer. All pressure tanks used in the ground water industry are
-              hydro-pneumatic, meaning they contain water (hydro) and air
-              (pneumatic). In this article, we will use the terms “captive air”
-              and “conventional” to differentiate the two types of tanks.
-            </p>
-            <blockquote>
-              What happens if the pre-charge is not correct? If it is set higher
-              than the pump cut-in pressure, the tank will run completely out of
-              water before the pressure switch tells the pump to turn on and
-              there will be a momentary loss of system pressure. If it is set
-              too low, the tank will not have as much drawdown as it would were
-              the pre-charge set properly.
-            </blockquote>
-            <br />
-            <span class="image left"
-              ><img src="{% static 'images/captank.jpg' %}" alt="" />Figure
-              1</span
-            >
-            <h3>Captive Air Tank</h3>
-            <p>
-              A captive air tank (see Figure 1) has a rubber or plastic membrane
-              separating the water from the air, and must be pre-charged to a
-              certain pressure, usually 2 psi below the pressure switch cut-in
-              point (4psi for fiberglass tanks). For a 30/50 pressure switch,
-              the tank would have a 28-psi pre-charge. If you decide to use a
-              different pressure switch setting, say 20/40 or 40/60, it will be
-              necessary to adjust the pre-charge pressure in the tank to 18 psi
-              or 38 psi, respectively. Pre-charge pressure in captive air tanks
-              always is checked when the tank's water chamber is completely
-              empty. What happens if the pre-charge is not correct? If it is set
-              higher than the pump cut-in pressure, the tank will run completely
-              out of water before the pump turns on, and there will be a
-              momentary loss of system pressure. If it is set too low, the tank
-              will not have as much drawdown as it would, were the pre-charge
-              set properly. Boyle's law confirms this phenomenon, as described
-              below.
-            </p>
-            <br /><br />
-            <span class="image left"
-              ><img src="{% static 'images/contank.jpg' %}" alt="" />Figure
-              2</span
-            >
-            <h3>Conventional Tank</h3>
-            <p>
-              Conventional tanks (see Figure 2) simply are sealed vessels that
-              do not have a membrane to separate the air from the water, as do
-              captive air tanks. Because the air pressure in a conventional tank
-              is higher than the vapor pressure of the water in the tank, air is
-              absorbed into the water, and it is necessary to replenish the air
-              on a regular basis. Several schemes are commonly practiced to
-              minimize this air absorption and to replenish the air, without
-              which a conventional tank would become completely waterlogged,
-              defeating its purpose and function. In order to help reduce the
-              amount of air absorbed into the water, a round plastic float a
-              little smaller than the diameter of the tank can be fitted. These
-              are flexible enough to be rolled into a cylinder and inserted into
-              one of the pipefittings in the side of the tank. Even with a
-              float, however, it is necessary to replenish the air to maintain
-              the proper air/water ratio for optimal tank performance.
-            </p>
-            <h3>Conventional vs Captive Air</h3>
-            <p>
-              With the hassle of having to deal with maintaining the proper air
-              charge in a conventional tank, why do contractors still use
-              conventional tanks in residential systems instead of pre-charged
-              tanks? There actually are several reasons, one or two of which are
-              legitimate in my opinion.
-            </p>
-            <ul>
-              <li>
-                If you have iron or sulfur dioxide in your water, a conventional
-                pressure tank can help oxidize and reduce these contaminants
-                since there is air in contact with the top surface of the water.
-              </li>
-              <li>Installing conventional tanks brings in service work.</li>
-              <li>
-                Many contractors were burned by some of the captive-air tanks
-                that came onto the market in the 1980s. Many of these tanks
-                proved to be disasters in terms of reliability. The quality of
-                the captive-air tanks on the market today makes this reason
-                obsolete.
-              </li>
-              <li>
-                The fourth reason simply is the comfort level that some
-                contractors have doing pump work the same way day in and day out
-                and installing the same products they always have installed and
-                perhaps their fathers installed. Some would call this product
-                loyalty and it can't be faulted except for the missed
-                opportunities that it perpetuates. Enough said.
-              </li>
-            </ul>
-            <h3>Drawdown Factor</h3>
-            <p>
-              The drawdown of a pressure tank, whether it be captive-air or
-              conventional, can be calculated using a formula known as Boyle's
-              Law, which we will cover in detail next month. Boyle's Law takes
-              into account the amount of pre-charge and the cut-in and cut-out
-              settings of the pressure switch to come up with a ratio of total
-              tank capacity to drawdown. In a captive-air tank, a 30/50
-              pressure-switch setting and 28 psi pre-charge yields a drawdown
-              ratio of 0.3. This means that 30 percent of the tank's total
-              volume is available as drawdown. An important concept to
-              understand is that 70 percent of the tank's total volume is
-              compressed air that is available to push out the 30 percent of
-              water. <br />
-              Compare this number to the amount of air available in a
-              non-pre-charged conventional tank. In a conventional tank, without
-              a pre-charge, 75 percent of the tank's volume must be filled with
-              water just to compress the air to 50 psi when it initially is
-              filled. That leaves only 25 percent for air to force out the
-              water, which is why it takes a much larger conventional
-              non-pre-charged tank to deliver the same drawdown as a captive air
-              tank. Without a pre-charge, a conventional tank running at 30/50
-              has a drawdown factor of just 10 percent. To deliver 22 gallons of
-              drawdown would require a 220-gallon conventional tank without a
-              pre-charge, versus a 73-gallon captive air tank.
-            </p>
-            <p>
-              But who says you can't pre-charge a conventional tank? Remember
-              the ratio of air to water in a captive-air tank operating at a
-              30/50 pressure range - 70 percent air to 30 percent water? If it
-              were possible to control the water level in a conventional to the
-              same level it would be in a captive air tank, the drawdown would
-              be the same for both. <br />
-              In practice, it is possible to increase the pre-charge pressure in
-              conventional tank. By using a compressor system with a water level
-              probe, or a spring-loaded air-release valve located one-third up
-              the side of the tank, you get comparable drawdowns to captive-air
-              tanks. However, regarding the latter, most hydro-pneumatic tank
-              manufacturers put the air release fitting at or above the center
-              on the tank. Since you are forced to install the air release valve
-              in the fitting provided by the tank manufacturers, the drawdown
-              factor ends up being between 10 percent and 30 percent, depending
-              on whether or not you use a spring-loaded air-release valve and on
-              the exact location of the air release fitting on the tank.
-              <br /><br />
-              Off-the-shelf air compressor systems are controlled by a water
-              level probe and separate pressure switch. By optimizing the height
-              of the water level probe, it is possible to maximize the drawdown
-              yielding ratios comparable to those of captive air tanks.
-            </p>
-          </div>
-        </section>
-      </div>
-
-      <!-- Footer -->
-      <footer id="footer">
-        <div class="inner">
-          <ul class="copyright">
-            <li>&copy; NOLOdev</li>
-            <li>Theme: HTML5 UP</li>
-            <li>Article: thePUMPBOOK</li>
-          </ul>
-        </div>
-      </footer>
+      <p>
+        There are two primary reasons for having a pressure tank in a pumped
+        water system. The first is to give the pump motor a minute or two to
+        dissipate the extra heat energy generated each time the pump starts, and
+        the second is to store water under pressure so the pump does not have to
+        come on every time there is a small, intermittent demand for water. The
+        amount of usable water stored in a pressure tank is called the drawdown;
+        it is the amount of water that can be drawn from the tank between the
+        time the pressure switch cuts out, turning off the pump, and it cuts
+        back in, turning on the pump. Tanks are sized with enough drawdown to
+        allow the pump to run for a minute or so between cycles, as recommended
+        by the motor manufacturers. A 10-gpm residential water system pump would
+        require a pressure tank with 10 gallons of drawdown, for instance. There
+        are two types of pressure tanks - captive-air tanks (also called
+        pre-charged, diaphragm or bladder tanks), and conventional tanks (also
+        known as hydro-pneumatic, galvanized, ASME and epoxy-lined tanks). Using
+        the term “hydro-pneumatic” to describe a conventional tank is a bit of a
+        misnomer. All pressure tanks used in the ground water industry are
+        hydro-pneumatic, meaning they contain water (hydro) and air (pneumatic).
+        In this article, we will use the terms “captive air” and “conventional”
+        to differentiate the two types of tanks.
+      </p>
+      <blockquote>
+        What happens if the pre-charge is not correct? If it is set higher than
+        the pump cut-in pressure, the tank will run completely out of water
+        before the pressure switch tells the pump to turn on and there will be a
+        momentary loss of system pressure. If it is set too low, the tank will
+        not have as much drawdown as it would were the pre-charge set properly.
+      </blockquote>
+      <br />
+      <span class="image left"
+        ><img src="{% static 'images/captank.jpg' %}" alt="" />Figure 1</span
+      >
+      <h3>Captive Air Tank</h3>
+      <p>
+        A captive air tank (see Figure 1) has a rubber or plastic membrane
+        separating the water from the air, and must be pre-charged to a certain
+        pressure, usually 2 psi below the pressure switch cut-in point (4psi for
+        fiberglass tanks). For a 30/50 pressure switch, the tank would have a
+        28-psi pre-charge. If you decide to use a different pressure switch
+        setting, say 20/40 or 40/60, it will be necessary to adjust the
+        pre-charge pressure in the tank to 18 psi or 38 psi, respectively.
+        Pre-charge pressure in captive air tanks always is checked when the
+        tank's water chamber is completely empty. What happens if the pre-charge
+        is not correct? If it is set higher than the pump cut-in pressure, the
+        tank will run completely out of water before the pump turns on, and
+        there will be a momentary loss of system pressure. If it is set too low,
+        the tank will not have as much drawdown as it would, were the pre-charge
+        set properly. Boyle's law confirms this phenomenon, as described below.
+      </p>
+      <br /><br />
+      <span class="image left"
+        ><img src="{% static 'images/contank.jpg' %}" alt="" />Figure 2</span
+      >
+      <h3>Conventional Tank</h3>
+      <p>
+        Conventional tanks (see Figure 2) simply are sealed vessels that do not
+        have a membrane to separate the air from the water, as do captive air
+        tanks. Because the air pressure in a conventional tank is higher than
+        the vapor pressure of the water in the tank, air is absorbed into the
+        water, and it is necessary to replenish the air on a regular basis.
+        Several schemes are commonly practiced to minimize this air absorption
+        and to replenish the air, without which a conventional tank would become
+        completely waterlogged, defeating its purpose and function. In order to
+        help reduce the amount of air absorbed into the water, a round plastic
+        float a little smaller than the diameter of the tank can be fitted.
+        These are flexible enough to be rolled into a cylinder and inserted into
+        one of the pipefittings in the side of the tank. Even with a float,
+        however, it is necessary to replenish the air to maintain the proper
+        air/water ratio for optimal tank performance.
+      </p>
+      <h3>Conventional vs Captive Air</h3>
+      <p>
+        With the hassle of having to deal with maintaining the proper air charge
+        in a conventional tank, why do contractors still use conventional tanks
+        in residential systems instead of pre-charged tanks? There actually are
+        several reasons, one or two of which are legitimate in my opinion.
+      </p>
+      <ul>
+        <li>
+          If you have iron or sulfur dioxide in your water, a conventional
+          pressure tank can help oxidize and reduce these contaminants since
+          there is air in contact with the top surface of the water.
+        </li>
+        <li>Installing conventional tanks brings in service work.</li>
+        <li>
+          Many contractors were burned by some of the captive-air tanks that
+          came onto the market in the 1980s. Many of these tanks proved to be
+          disasters in terms of reliability. The quality of the captive-air
+          tanks on the market today makes this reason obsolete.
+        </li>
+        <li>
+          The fourth reason simply is the comfort level that some contractors
+          have doing pump work the same way day in and day out and installing
+          the same products they always have installed and perhaps their fathers
+          installed. Some would call this product loyalty and it can't be
+          faulted except for the missed opportunities that it perpetuates.
+          Enough said.
+        </li>
+      </ul>
+      <h3>Drawdown Factor</h3>
+      <p>
+        The drawdown of a pressure tank, whether it be captive-air or
+        conventional, can be calculated using a formula known as Boyle's Law,
+        which we will cover in detail next month. Boyle's Law takes into account
+        the amount of pre-charge and the cut-in and cut-out settings of the
+        pressure switch to come up with a ratio of total tank capacity to
+        drawdown. In a captive-air tank, a 30/50 pressure-switch setting and 28
+        psi pre-charge yields a drawdown ratio of 0.3. This means that 30
+        percent of the tank's total volume is available as drawdown. An
+        important concept to understand is that 70 percent of the tank's total
+        volume is compressed air that is available to push out the 30 percent of
+        water. <br />
+        Compare this number to the amount of air available in a non-pre-charged
+        conventional tank. In a conventional tank, without a pre-charge, 75
+        percent of the tank's volume must be filled with water just to compress
+        the air to 50 psi when it initially is filled. That leaves only 25
+        percent for air to force out the water, which is why it takes a much
+        larger conventional non-pre-charged tank to deliver the same drawdown as
+        a captive air tank. Without a pre-charge, a conventional tank running at
+        30/50 has a drawdown factor of just 10 percent. To deliver 22 gallons of
+        drawdown would require a 220-gallon conventional tank without a
+        pre-charge, versus a 73-gallon captive air tank.
+      </p>
+      <p>
+        But who says you can't pre-charge a conventional tank? Remember the
+        ratio of air to water in a captive-air tank operating at a 30/50
+        pressure range - 70 percent air to 30 percent water? If it were possible
+        to control the water level in a conventional to the same level it would
+        be in a captive air tank, the drawdown would be the same for both.
+        <br />
+        In practice, it is possible to increase the pre-charge pressure in
+        conventional tank. By using a compressor system with a water level
+        probe, or a spring-loaded air-release valve located one-third up the
+        side of the tank, you get comparable drawdowns to captive-air tanks.
+        However, regarding the latter, most hydro-pneumatic tank manufacturers
+        put the air release fitting at or above the center on the tank. Since
+        you are forced to install the air release valve in the fitting provided
+        by the tank manufacturers, the drawdown factor ends up being between 10
+        percent and 30 percent, depending on whether or not you use a
+        spring-loaded air-release valve and on the exact location of the air
+        release fitting on the tank.
+        <br /><br />
+        Off-the-shelf air compressor systems are controlled by a water level
+        probe and separate pressure switch. By optimizing the height of the
+        water level probe, it is possible to maximize the drawdown yielding
+        ratios comparable to those of captive air tanks.
+      </p>
     </div>
+  </section>
+</div>
 
-    <!-- Scripts -->
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
-    <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
-    <script src="{% static 'js/browser.min.js' %}"></script>
-    <script src="{% static 'js/breakpoints.min.js' %}"></script>
-    <script src="{% static 'js/util.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
-  </body>
-</html>
+{% endblock %}

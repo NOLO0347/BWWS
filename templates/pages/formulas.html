@@ -1,186 +1,127 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Brown Well & Water Supply</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
-    <noscript
-      ><link rel="stylesheet" href="{% static 'css/noscript.css' %}"
-    /></noscript>
-  </head>
-  <body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Header -->
-      <header id="header" class="alt style2">
-        <a href="{% url 'index' %}" class="logo"
-          ><strong>BWWS</strong> <span>Established in 1868</span></a
-        >
-        <nav>
-          <a href="#menu">Menu</a>
-        </nav>
+{% extends 'pages/base.html' %} {% load static %} {% block content %}
+
+<!-- Main -->
+<div id="main" class="alt">
+  <!-- One -->
+  <section id="one">
+    <div class="inner">
+      <header class="major">
+        <h1>Formulas</h1>
       </header>
-
-      <!-- Menu -->
-      <nav id="menu">
-        <ul class="links">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="{% url 'timesheet' %}">Timesheet</a></li>
-          <li><a href="{% url 'tools' %}">Tools</a></li>
-          <li><a href="{% url 'info' %}">Info & Troubleshooting</a></li>
-        </ul>
-        <ul class="actions stacked">
-          <li><a href="#" class="button fit">Log In</a></li>
-        </ul>
-      </nav>
-
-      <!-- Main -->
-      <div id="main" class="alt">
-        <!-- One -->
-        <section id="one">
-          <div class="inner">
-            <header class="major">
-              <h1>Formulas</h1>
-            </header>
-            <ul>
-              <li><a href="#scroll-to-section1">Chlorination</a></li>
-              <li><a href="#scroll-to-section2">Headloss</a></li>
-              <li><a href="#scroll-to-section2">Wire Sizing</a></li>
-            </ul>
-            <!-- Chlorination Calculator-->
-            <section id="scroll-to-section1">
-              <div class="box">
-                <h3>Chlorination</h3>
-                <p>
-                  North Carolina requires all water wells to be disinfected
-                  after construction, repairs, maintenance, or pump installation
-                  and testing. The standard method of disinfection is to produce
-                  a chlorine concentration of a <i>minimum</i>
-                  <strong>100 parts per million</strong> (ppm) in the water. To
-                  achieve this, most well contractors standardize using
-                  <i>Calcium Hypochlorite<sup> CIO</sup></i>
-                </p>
-                <ul>
-                  <li>
-                    Stabilized chlorine tablets or hypochlorite products
-                    containing fungicides, algaecides, or other disinfectants
-                    shall<strong><em> NOT</em></strong> be used.
-                  </li>
-                  <li>
-                    The chlorine solution
-                    <em>shall</em> stand in the well for a
-                    <strong><em>minimum</em></strong> of 24 hours
-                  </li>
-                </ul>
-
-                <div class="calculator">
-                  <label for="wellDepth">Well Depth:</label>
-                  <input type="number" id="wellDepth" required />
-
-                  <label for="staticDepth">Static Depth:</label>
-                  <input type="number" id="staticDepth" required />
-
-                  <label for="casingDiameter">Casing Diameter:</label>
-                  <select id="casingDiameter" onchange="updateGallonsPerFoot()">
-                    <option value="2">2" casing</option>
-                    <option value="3">3" casing</option>
-                    <option value="4">4" casing</option>
-                    <option value="5">5" casing</option>
-                    <option value="6">6" casing</option>
-                    <option value="8">8" casing</option>
-                    <option value="10">10" casing</option>
-                    <option value="12">12" casing</option>
-                    <option value="18">18" casing</option>
-                    <option value="24">24" casing</option>
-                    <option value="36">36" casing</option>
-                    <option value="48">48" casing</option>
-                    <option value="60">60" casing</option>
-                  </select>
-                  <br />
-                  <button onclick="calculate()">Calculate</button>
-                  <br />
-                  <br />
-                  <div id="resultSection">
-                    <div id="result"></div>
-                    <div id="formulaSteps"></div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section id="scroll-to-section2">
-              <div class="box">
-                <h2>Calculating headloss for switch/pump sizing</h2>
-
-                <strong>Reminder:</strong> The UPC requires a
-                <em>minimum</em> of 15 PSI output at each fixture. <br />
-                Review the full lesson
-                <a href="{% url 'pres_info' %}">HERE.</a>
-                <br />
-                <br />
-                <h5>Household Pressure</h5>
-                <b>SWi</b> <b>&#8722;</b> (<b>FH</b> <b>&times;</b> <b>.433</b>)
-                <b>=</b> <b>Fixture PSI</b>
-
-                <blockquote>
-                  <strong>FH</strong> = Foot-Head. <br />
-                  <strong>SWi</strong> = Switch Cut-in. <br />
-                  <strong>.433</strong> = 1 foot of head.<br />
-                </blockquote>
-                <h5>Lift Pressure</h5>
-                <b>LP + HP = FH</b> <br />
-                <b>HP =</b> (<b>SWo &times; 2.31</b>) <br />
-                <blockquote>
-                  <strong>2.31</strong> = 1 PSI.<br />
-                  <strong>FH</strong> = Foot-Head. <br />
-                  <strong>LP</strong> = Lift-Pressure. <br />
-                  <strong>SWo</strong> = Switch Cut-out. <br />
-                  <strong>HP</strong> = Household-Pressure. <br />
-                </blockquote>
-              </div>
-            </section>
-            <section id="scroll-to-section3">
-              <div class="box">
-                <h2>Wire sizing when two or more cable sizes are involved</h2>
-                <p>
-                  <strong>Reminder:</strong> Depending on the installation,
-                  <u>any</u> number of combinations of cable may be used. <br />
-                  Review the full lesson
-                  <a href="{% url 'wiresizing_info' %}">HERE.</a> <br />
-                  <br />(<b>Actual Length &divide; Max Allowed</b>) <b>+</b> (<b
-                    >Actual Length &divide; Max Allowed</b
-                  >) <b>= </b> ≤ <b> 1.00</b>
-                </p>
-              </div>
-            </section>
-          </div>
-        </section>
-      </div>
-
-      <!-- Footer -->
-      <footer id="footer">
-        <div class="inner">
-          <ul class="copyright">
-            <li>&copy; NOLOdev</li>
-            <li>Theme: HTML5 UP</li>
+      <ul>
+        <li><a href="#scroll-to-section1">Chlorination</a></li>
+        <li><a href="#scroll-to-section2">Headloss</a></li>
+        <li><a href="#scroll-to-section2">Wire Sizing</a></li>
+      </ul>
+      <!-- Chlorination Calculator-->
+      <section id="scroll-to-section1">
+        <div class="box">
+          <h3>Chlorination</h3>
+          <p>
+            North Carolina requires all water wells to be disinfected after
+            construction, repairs, maintenance, or pump installation and
+            testing. The standard method of disinfection is to produce a
+            chlorine concentration of a <i>minimum</i>
+            <strong>100 parts per million</strong> (ppm) in the water. To
+            achieve this, most well contractors standardize using
+            <i>Calcium Hypochlorite<sup> CIO</sup></i>
+          </p>
+          <ul>
+            <li>
+              Stabilized chlorine tablets or hypochlorite products containing
+              fungicides, algaecides, or other disinfectants shall<strong
+                ><em> NOT</em></strong
+              >
+              be used.
+            </li>
+            <li>
+              The chlorine solution
+              <em>shall</em> stand in the well for a
+              <strong><em>minimum</em></strong> of 24 hours
+            </li>
           </ul>
-        </div>
-      </footer>
-    </div>
 
-    <!-- Scripts -->
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
-    <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
-    <script src="{% static 'js/browser.min.js' %}"></script>
-    <script src="{% static 'js/breakpoints.min.js' %}"></script>
-    <script src="{% static 'js/util.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
-    <script src="{% static 'js/scrolltosection.js' %}"></script>
-    <script src="{% static 'js/chlor_calc.js' %}"></script>
-  </body>
-</html>
+          <div class="calculator">
+            <label for="wellDepth">Well Depth:</label>
+            <input type="number" id="wellDepth" required />
+
+            <label for="staticDepth">Static Depth:</label>
+            <input type="number" id="staticDepth" required />
+
+            <label for="casingDiameter">Casing Diameter:</label>
+            <select id="casingDiameter" onchange="updateGallonsPerFoot()">
+              <option value="2">2" casing</option>
+              <option value="3">3" casing</option>
+              <option value="4">4" casing</option>
+              <option value="5">5" casing</option>
+              <option value="6">6" casing</option>
+              <option value="8">8" casing</option>
+              <option value="10">10" casing</option>
+              <option value="12">12" casing</option>
+              <option value="18">18" casing</option>
+              <option value="24">24" casing</option>
+              <option value="36">36" casing</option>
+              <option value="48">48" casing</option>
+              <option value="60">60" casing</option>
+            </select>
+            <br />
+            <button onclick="calculate()">Calculate</button>
+            <br />
+            <br />
+            <div id="resultSection">
+              <div id="result"></div>
+              <div id="formulaSteps"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="scroll-to-section2">
+        <div class="box">
+          <h2>Calculating headloss for switch/pump sizing</h2>
+
+          <strong>Reminder:</strong> The UPC requires a <em>minimum</em> of 15
+          PSI output at each fixture. <br />
+          Review the full lesson
+          <a href="{% url 'pres_info' %}">HERE.</a>
+          <br />
+          <br />
+          <h5>Household Pressure</h5>
+          <b>SWi</b> <b>&#8722;</b> (<b>FH</b> <b>&times;</b> <b>.433</b>)
+          <b>=</b> <b>Fixture PSI</b>
+
+          <blockquote>
+            <strong>FH</strong> = Foot-Head. <br />
+            <strong>SWi</strong> = Switch Cut-in. <br />
+            <strong>.433</strong> = 1 foot of head.<br />
+          </blockquote>
+          <h5>Lift Pressure</h5>
+          <b>LP + HP = FH</b> <br />
+          <b>HP =</b> (<b>SWo &times; 2.31</b>) <br />
+          <blockquote>
+            <strong>2.31</strong> = 1 PSI.<br />
+            <strong>FH</strong> = Foot-Head. <br />
+            <strong>LP</strong> = Lift-Pressure. <br />
+            <strong>SWo</strong> = Switch Cut-out. <br />
+            <strong>HP</strong> = Household-Pressure. <br />
+          </blockquote>
+        </div>
+      </section>
+      <section id="scroll-to-section3">
+        <div class="box">
+          <h2>Wire sizing when two or more cable sizes are involved</h2>
+          <p>
+            <strong>Reminder:</strong> Depending on the installation,
+            <u>any</u> number of combinations of cable may be used. <br />
+            Review the full lesson
+            <a href="{% url 'wiresizing_info' %}">HERE.</a> <br />
+            <br />(<b>Actual Length &divide; Max Allowed</b>) <b>+</b> (<b
+              >Actual Length &divide; Max Allowed</b
+            >) <b>= </b> ≤ <b> 1.00</b>
+          </p>
+        </div>
+      </section>
+    </div>
+  </section>
+</div>
+
+{% endblock %}

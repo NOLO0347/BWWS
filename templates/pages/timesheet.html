@@ -1,84 +1,19 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Brown Well & Water Supply</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
-    <noscript
-      ><link rel="stylesheet" href="{% static 'css/noscript.css' %}"
-    /></noscript>
-  </head>
-  <body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Header -->
-      <header id="header" class="alt style2">
-        <a href="{% url 'index' %}" class="logo"
-          ><strong>BWWS</strong> <span>Established in 1868</span></a
-        >
-        <nav>
-          <a href="#menu">Menu</a>
-        </nav>
+{% extends 'pages/base.html' %}{% load static %} {% block content %}
+
+<!-- Main -->
+<div id="main" class="alt">
+  <!-- One -->
+  <section id="one">
+    <div class="inner">
+      <header class="major">
+        <h1>Coming Soon</h1>
       </header>
-
-      <!-- Menu -->
-      <nav id="menu">
-        <ul class="links">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="{% url 'timesheet' %}">Timesheet</a></li>
-          <li><a href="{% url 'tools' %}">Tools</a></li>
-          <li><a href="{% url 'info' %}">Info & Troubleshooting</a></li>
-        </ul>
-        <ul class="actions stacked">
-          <li><a href="#" class="button fit">Log In</a></li>
-        </ul>
-      </nav>
-
-      <!-- Main -->
-      <div id="main" class="alt">
-        <!-- One -->
-        <section id="one">
-          <div class="inner">
-            <header class="major">
-              <h1>Coming Soon</h1>
-            </header>
-            <span class="image main"
-              ><img src="{% static 'images/construction.jpg' %}" alt="construction"
-            /></span>
-            <p>
-              Under construction!
-            </p>
-            
-          </div>
-        </section>
-      </div>
-
-      
-
-      <!-- Footer -->
-      <footer id="footer">
-        <div class="inner">
-          
-          <ul class="copyright">
-            <li>&copy; NOLOdev</li>
-            <li>Theme: HTML5 UP</li>
-          </ul>
-        </div>
-      </footer>
+      <span class="image main"
+        ><img src="{% static 'images/construction.jpg' %}" alt="construction"
+      /></span>
+      <p>Under construction!</p>
     </div>
+  </section>
+</div>
 
-    <!-- Scripts -->
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
-    <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
-    <script src="{% static 'js/browser.min.js' %}"></script>
-    <script src="{% static 'js/breakpoints.min.js' %}"></script>
-    <script src="{% static 'js/util.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
-  </body>
-</html>
+{% endblock %}

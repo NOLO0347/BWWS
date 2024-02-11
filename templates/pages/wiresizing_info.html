@@ -1,131 +1,70 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Brown Well & Water Supply</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
-    <noscript
-      ><link rel="stylesheet" href="{% static 'css/noscript.css' %}"
-    /></noscript>
-  </head>
-  <body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Header -->
-      <header id="header" class="alt style2">
-        <a href="{% url 'index' %}" class="logo"
-          ><strong>BWWS</strong> <span>Established in 1868</span></a
-        >
-        <nav>
-          <a href="#menu">Menu</a>
-        </nav>
+{% extends 'pages/base.html' %}{% load static %} {% block content %}
+
+<!-- Main -->
+<div id="main" class="alt">
+  <!-- One -->
+  <section id="one">
+    <div class="inner">
+      <header class="major">
+        <h1>Wire sizing when two or more cable sizes are involved</h1>
       </header>
+      <p>
+        Depending on the installation,
+        <u>any</u> number of combinations of cable may be used. <br />
+        View the Wire Table
+        <a href="{% url 'wiretable' %}">HERE</a> <br /><br />
+        <strong>Formula:</strong> (<b>Actual Length &divide; Max Allowed</b>)
+        <b>+</b> (<b>Actual Length &divide; Max Allowed</b>) <b>= </b> ≤<b>
+          1.00</b
+        >
+        <sub>you can think of <b>1.0</b> as being 100% capacity.</sub>
+      </p>
+      <blockquote>
+        <h3>Example:</h3>
+        A well already has 160 feet of buried #10 cable between the service
+        entrance and the well head. A new 3 HP, 230 volt, single phase motor is
+        being installed to replace a smaller motor. The question is: since there
+        is already 160 feet of #10 AWG installed, what size cable is required in
+        the well with a 3 HP, 230 volt, single phase motor setting at 310 feet?
+        <sub>The allowed run for a 3HP pump on #10 wire is 300 feet</sub>
+        <br />
+        <br />
 
-      <!-- Menu -->
-      <nav id="menu">
-        <ul class="links">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="{% url 'timesheet' %}">Timesheet</a></li>
-          <li><a href="{% url 'tools' %}">Tools</a></li>
-          <li><a href="{% url 'info' %}">Info & Troubleshooting</a></li>
-        </ul>
-        <ul class="actions stacked">
-          <li><a href="#" class="button fit">Log In</a></li>
-        </ul>
-      </nav>
+        <b>160</b> (A. length) <b>&divide;</b> <b>300</b> (M. allowed)
+        <b>=</b>
+        <b>0.533.</b>
+      </blockquote>
+      <p>
+        This means 53.3% of the allowable voltage drop or loss, which is allowed
+        between the service entrance and the motor, occurs in this wire. This
+        leaves 46.7% of some other wire size to use in the remaining 310 feet
+        "down hole" wire run.
+      </p>
+      <blockquote>
+        The table shows #8 AWG copper wire is good for 470 feet. Using the
+        second half of the formula, <br /><b>310</b> (A. length)
+        <b>&divide;</b> <b>470</b> (M. allowed) <b>=</b> <b>0.660.</b>
+      </blockquote>
+      <p>
+        Adding this to the <b>0.533</b> determined earlier = <b>1.193.</b> Since
+        this combination is greater than <b>1.0,</b> the voltage drop will NOT
+        meet the US NEC recommendations.
+      </p>
+      <blockquote>
+        The table shows #6 AWG copper wire is good for 750 feet. Using the
+        second half of the formula again, <br />
+        <b>310</b> <b>&divide;</b> <b>750</b> <b>=</b> <b>0.413</b>
+      </blockquote>
 
-      <!-- Main -->
-      <div id="main" class="alt">
-        <!-- One -->
-        <section id="one">
-          <div class="inner">
-            <header class="major">
-              <h1>Wire sizing when two or more cable sizes are involved</h1>
-            </header>
-            <p>
-              Depending on the installation,
-              <u>any</u> number of combinations of cable may be used. <br />
-              View the Wire Table
-              <a href="{% url 'wiretable' %}">HERE</a> <br /><br />
-              <strong>Formula:</strong> (<b
-                >Actual Length &divide; Max Allowed</b
-              >) <b>+</b> (<b>Actual Length &divide; Max Allowed</b>)
-              <b>= </b> ≤<b> 1.00</b> <sub>you can think of <b>1.0</b> as being 100% capacity.</sub>
-            </p>
-            <blockquote>
-              <h3>Example:</h3>
-              A well already has 160 feet of buried #10 cable between the
-              service entrance and the well head. A new 3 HP, 230 volt, single
-              phase motor is being installed to replace a smaller motor. The
-              question is: since there is already 160 feet of #10 AWG installed,
-              what size cable is required in the well with a 3 HP, 230 volt,
-              single phase motor setting at 310 feet?
-              <sub>The allowed run for a 3HP pump on #10 wire is 300 feet</sub>
-              <br />
-              <br />
-
-              <b>160</b> (A. length) <b>&divide;</b> <b>300</b> (M. allowed)
-              <b>=</b>
-              <b>0.533.</b>
-            </blockquote>
-            <p>
-              This means 53.3% of the allowable voltage drop or loss, which is
-              allowed between the service entrance and the motor, occurs in this
-              wire. This leaves 46.7% of some other wire size to use in the
-              remaining 310 feet "down hole" wire run.
-            </p>
-            <blockquote>
-              The table shows #8 AWG copper wire is good for 470 feet. Using the
-              second half of the formula, <br /><b>310</b> (A. length)
-              <b>&divide;</b> <b>470</b> (M. allowed) <b>=</b> <b>0.660.</b>
-            </blockquote>
-            <p>
-              Adding this to the <b>0.533</b> determined earlier =
-              <b>1.193.</b> Since this combination is greater than
-              <b>1.0,</b> the voltage drop will NOT meet the US NEC
-              recommendations.
-            </p>
-            <blockquote>
-              The table shows #6 AWG copper wire is good for 750 feet. Using the
-              second half of the formula again, <br />
-              <b>310</b> <b>&divide;</b> <b>750</b> <b>=</b> <b>0.413</b>
-            </blockquote>
-
-            <p>
-              and using these numbers, <b>0.533</b> <b>+</b> <b>0.413</b>
-              <b>=</b> <b>.0946</b> which is less than <b>1.0</b> and will meet
-              the NEC recommended voltage drop. This works for two, three and
-              more combinations of wire and it does not matter which size wire
-              comes first in the installation.
-            </p>
-          </div>
-        </section>
-      </div>
-
-      <!-- Footer -->
-      <footer id="footer">
-        <div class="inner">
-          <ul class="copyright">
-            <li>&copy; NOLOdev</li>
-            <li>Theme: HTML5 UP</li>
-            <li>Article: thePUMPBOOK</li>
-          </ul>
-        </div>
-      </footer>
+      <p>
+        and using these numbers, <b>0.533</b> <b>+</b> <b>0.413</b> <b>=</b>
+        <b>.0946</b> which is less than <b>1.0</b> and will meet the NEC
+        recommended voltage drop. This works for two, three and more
+        combinations of wire and it does not matter which size wire comes first
+        in the installation.
+      </p>
     </div>
+  </section>
+</div>
 
-    <!-- Scripts -->
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
-    <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
-    <script src="{% static 'js/browser.min.js' %}"></script>
-    <script src="{% static 'js/breakpoints.min.js' %}"></script>
-    <script src="{% static 'js/util.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
-  </body>
-</html>
+{% endblock %}
